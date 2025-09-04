@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -994,4 +995,1002 @@
         });
     </script>
 </body>
+=======
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MEGASOFT - Soluciones Empresariales Integrales</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #1a237e;
+            --secondary-color: #3f51b5;
+            --accent-color: #00bcd4;
+            --text-color: #ffffff;
+            --soft: #f8fafc;
+            --dark-gray: #64748b;
+            --light-gray: #f1f5f9;
+            --gradient-primary: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+            --gradient-soft: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+            --shadow-soft: 0 4px 20px rgba(0, 0, 0, 0.08);
+            --shadow-medium: 0 8px 32px rgba(0, 0, 0, 0.1);
+            --shadow-strong: 0 20px 40px rgba(0, 0, 0, 0.15);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            color: #334155;
+            background: var(--gradient-soft);
+            scroll-behavior: smooth;
+        }
+
+        /* === HEADER === */
+        .header {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(20px);
+            box-shadow: var(--shadow-soft);
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            transition: all 0.3s ease;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 2rem;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .logo img {
+            height: 50px;
+            transition: transform 0.3s ease;
+        }
+
+        .logo:hover img {
+            transform: scale(1.05);
+        }
+
+        .menu {
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+            list-style: none;
+        }
+
+        .menu a {
+            text-decoration: none;
+            color: var(--dark-gray);
+            font-weight: 500;
+            padding: 0.5rem 1rem;
+            border-radius: 50px;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .menu a::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: var(--gradient-primary);
+            transition: left 0.3s ease;
+            z-index: -1;
+            border-radius: 50px;
+        }
+
+        .menu a:hover {
+            color: white;
+            transform: translateY(-2px);
+        }
+
+        .menu a:hover::before {
+            left: 0;
+        }
+
+        .btn-acceso {
+            background: var(--gradient-primary) !important;
+            color: white !important;
+            padding: 0.75rem 1.5rem !important;
+            border-radius: 50px;
+            font-weight: 600;
+            box-shadow: var(--shadow-soft);
+            transition: all 0.3s ease;
+        }
+
+        .btn-acceso:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-strong);
+        }
+
+        .menu-toggle {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            color: var(--primary-color);
+            cursor: pointer;
+        }
+
+        /* === HERO SECTION === */
+        .contenido-principal {
+            position: relative;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+
+        .video-fondo {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -2;
+        }
+
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, rgba(26, 35, 126, 0.8), rgba(0, 188, 212, 0.6));
+            z-index: -1;
+        }
+
+        .fondo {
+            text-align: center;
+            z-index: 1;
+            animation: slideInUp 1s ease-out;
+        }
+
+        .recuadro-encapsulado {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 32px;
+            padding: 4rem;
+            box-shadow: var(--shadow-medium);
+        }
+
+        .imagen-logo {
+            max-width: 400px;
+            width: 100%;
+            height: auto;
+            filter: brightness(1.1);
+            transition: transform 0.3s ease;
+        }
+
+        .imagen-logo:hover {
+            transform: scale(1.05);
+        }
+
+        /* === SECCIÓN MÓDULOS === */
+        .contenedor-producto {
+            padding: 100px 20px;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .contenedor-producto h1 {
+            text-align: center;
+            font-size: clamp(2.5rem, 5vw, 4rem);
+            font-weight: 900;
+            background: var(--gradient-primary);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 4rem;
+            letter-spacing: -0.02em;
+        }
+
+        .sistema {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 32px;
+            margin-top: 60px;
+        }
+
+        .card {
+            background: white;
+            border-radius: 24px;
+            padding: 40px;
+            box-shadow: var(--shadow-soft);
+            border: 1px solid rgba(0, 0, 0, 0.05);
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+            overflow: hidden;
+            opacity: 0;
+            transform: translateY(30px);
+            animation: slideInUp 0.8s ease-out forwards;
+        }
+
+        .card:nth-child(1) { animation-delay: 0.1s; }
+        .card:nth-child(2) { animation-delay: 0.2s; }
+        .card:nth-child(3) { animation-delay: 0.3s; }
+        .card:nth-child(4) { animation-delay: 0.4s; }
+        .card:nth-child(5) { animation-delay: 0.5s; }
+        .card:nth-child(6) { animation-delay: 0.6s; }
+
+        .card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: var(--gradient-primary);
+            border-radius: 24px 24px 0 0;
+        }
+
+        .card::after {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(0, 188, 212, 0.03) 0%, transparent 70%);
+            pointer-events: none;
+        }
+
+        .card:hover {
+            transform: translateY(-12px) scale(1.02);
+            box-shadow: var(--shadow-strong);
+            border-color: var(--accent-color);
+        }
+
+        .card i {
+            font-size: 4rem;
+            color: var(--accent-color);
+            margin-bottom: 24px;
+            transition: all 0.4s ease;
+            position: relative;
+            z-index: 1;
+        }
+
+        .card:hover i {
+            transform: scale(1.2) rotate(5deg);
+            color: var(--primary-color);
+        }
+
+        .card-title {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            margin-bottom: 16px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .texto-card {
+            color: var(--dark-gray);
+            line-height: 1.7;
+            margin-bottom: 24px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .card .btn {
+            background: var(--gradient-primary);
+            color: white;
+            padding: 12px 24px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+            position: relative;
+            z-index: 1;
+        }
+
+        .card .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 24px rgba(26, 35, 126, 0.3);
+        }
+
+        /* === NOTICIAS === */
+        .contenedor {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 80px 20px;
+        }
+
+        .contenedor h2 {
+            text-align: center;
+            font-size: clamp(2rem, 4vw, 3rem);
+            font-weight: 800;
+            color: var(--primary-color);
+            margin-bottom: 3rem;
+            position: relative;
+        }
+
+        .contenedor h2::after {
+            content: '';
+            position: absolute;
+            bottom: -12px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background: var(--gradient-primary);
+            border-radius: 2px;
+        }
+
+        .contenedor-noticias {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 32px;
+            margin-top: 60px;
+        }
+
+        .noticia {
+            background: white;
+            padding: 32px;
+            border-radius: 20px;
+            box-shadow: var(--shadow-soft);
+            border: 1px solid rgba(0, 0, 0, 0.05);
+            transition: all 0.3s ease;
+        }
+
+        .noticia:hover {
+            transform: translateY(-8px);
+            box-shadow: var(--shadow-medium);
+        }
+
+        .noticia h3 {
+            color: var(--primary-color);
+            font-weight: 700;
+            margin-bottom: 16px;
+        }
+
+        /* === FEATURES SECTION === */
+        #features {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            padding: 100px 20px;
+        }
+
+        #features .container {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .center {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .center h1 {
+            font-size: clamp(2.5rem, 5vw, 4rem);
+            font-weight: 900;
+            margin-bottom: 1rem;
+        }
+
+        .center h3 {
+            font-size: 1.25rem;
+            font-weight: 400;
+            opacity: 0.9;
+            max-width: 800px;
+            margin: 0 auto 2rem;
+        }
+
+        .center hr {
+            width: 80px;
+            height: 4px;
+            background: var(--accent-color);
+            border: none;
+            margin: 0 auto;
+            border-radius: 2px;
+        }
+
+        .tools-section {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+            margin: 60px 0;
+        }
+
+        .tool-item {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(20px);
+            padding: 40px;
+            border-radius: 24px;
+            text-align: center;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            transition: all 0.3s ease;
+        }
+
+        .tool-item:hover {
+            transform: translateY(-8px);
+            background: rgba(255, 255, 255, 0.15);
+        }
+
+        .tool-item img {
+            width: 80px;
+            height: 80px;
+            margin: 20px 0;
+            border-radius: 16px;
+        }
+
+        .tool-item svg {
+            margin: 20px 0;
+        }
+
+        .btn-info {
+            background: var(--accent-color);
+            color: white;
+            padding: 12px 24px;
+            border: none;
+            border-radius: 50px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .btn-info:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 24px rgba(0, 188, 212, 0.3);
+        }
+
+        .schedule-section {
+            margin-top: 80px;
+        }
+
+        .row-flex {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 32px;
+            margin: 40px 0;
+        }
+
+        .schedule-column {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(20px);
+            padding: 32px;
+            border-radius: 20px;
+            text-align: center;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        /* === FOOTER === */
+        .footer {
+            background: linear-gradient(135deg, #1e293b, #334155);
+            color: white;
+            padding: 60px 20px 20px;
+        }
+
+        .footer-top {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            max-width: 1400px;
+            margin: 0 auto 40px;
+        }
+
+        .footer-col h3 {
+            margin-bottom: 20px;
+            color: var(--accent-color);
+            font-weight: 600;
+        }
+
+        .contact-list {
+            list-style: none;
+        }
+
+        .contact-list li {
+            margin-bottom: 12px;
+        }
+
+        .contact-list a {
+            color: rgba(255, 255, 255, 0.8);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .contact-list a:hover {
+            color: var(--accent-color);
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            padding-top: 20px;
+            text-align: center;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .social {
+            display: flex;
+            gap: 16px;
+        }
+
+        .social a {
+            width: 40px;
+            height: 40px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            transition: all 0.3s ease;
+        }
+
+        .social a:hover {
+            background: var(--accent-color);
+            transform: translateY(-2px);
+        }
+
+        /* === FLOATING CONTACT === */
+        .icono-flotante {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 60px;
+            height: 60px;
+            background: var(--gradient-primary);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            box-shadow: var(--shadow-strong);
+            transition: all 0.3s ease;
+            z-index: 1000;
+        }
+
+        .icono-flotante:hover {
+            transform: scale(1.1);
+        }
+
+        .menu-contacto {
+            position: fixed;
+            bottom: 100px;
+            right: 30px;
+            background: white;
+            border-radius: 16px;
+            padding: 20px;
+            box-shadow: var(--shadow-strong);
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(20px);
+            transition: all 0.3s ease;
+            z-index: 999;
+            min-width: 200px;
+        }
+
+        .menu-contacto.active {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+
+        .menu-contacto a {
+            display: block;
+            padding: 12px 0;
+            text-decoration: none;
+            color: var(--primary-color);
+            border-bottom: 1px solid var(--light-gray);
+            transition: color 0.3s ease;
+        }
+
+        .menu-contacto a:last-child {
+            border-bottom: none;
+        }
+
+        .menu-contacto a:hover {
+            color: var(--accent-color);
+        }
+
+        /* === ANIMATIONS === */
+        @keyframes slideInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* === RESPONSIVE === */
+        @media (max-width: 768px) {
+            .menu {
+                display: none;
+            }
+
+            .menu-toggle {
+                display: block;
+            }
+
+            .navbar {
+                padding: 1rem;
+            }
+
+            .contenido-principal {
+                padding-top: 80px;
+            }
+
+            .recuadro-encapsulado {
+                padding: 2rem;
+                margin: 1rem;
+            }
+
+            .sistema {
+                grid-template-columns: 1fr;
+                gap: 24px;
+            }
+
+            .card {
+                padding: 32px 24px;
+            }
+
+            .footer-bottom {
+                flex-direction: column;
+                gap: 20px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .contenedor-producto {
+                padding: 60px 15px;
+            }
+
+            .contenedor {
+                padding: 60px 15px;
+            }
+
+            #features {
+                padding: 60px 15px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header class="header">
+        <div class="navbar">
+            <a href="#" class="logo">
+                <img src="./img/Logo.png" alt="logo MEGASOFT">
+            </a>
+
+            <button class="menu-toggle" onclick="toggleMenu()">&#9776;</button>
+
+            <nav class="menu">
+                <a href="Empresa.html">Nosotros</a>
+                <a href="clientes.html">Clientes</a>
+                <a href="sistema.html">Productos</a>
+                <a href="#utilidades">Utilidades</a>
+                <a href="contacto.html">Contáctanos</a>
+                <a href="#noticia">Noticias</a>
+                <a href="#ingresar" class="btn-acceso">Acceso clientes</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="contenido-principal">
+            <video loop muted autoplay class="video-fondo" src="./video/video3.webm"></video>
+            <div class="overlay"></div>
+            
+            <div class="fondo">
+                <div class="recuadro-encapsulado">
+                    <img src="./img/megasoft-vertical.png" class="imagen-logo" alt="logo">
+                </div>
+            </div>
+        </section>
+
+        <section class="contenedor-producto">
+            <h1>Conocé nuestro sistema de gestión</h1>
+            
+            <div class="sistema">
+                <div class="card">
+                    <i class="fa-solid fa-shop"></i>
+                    <div class="card-body">
+                        <h2 class="card-title">Gestión para Empresas o Comercios</h2>
+                        <p class="texto-card">Sistema diseñado para la gestión administrativa y comercial de empresas. Incluye control fiscal e impositivo, módulos para puntos de venta y puestos administrativos, panel gerencial con acceso por usuario y contraseña, y niveles de permisos personalizados.</p>
+                        <a href="sistema.html?modulo=comercios" class="btn">Más información</a>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <i class="fas fa-gas-pump"></i>
+                    <div class="card-body">
+                        <h2 class="card-title">Gestión para Estación de Servicios</h2>
+                        <p class="texto-card">Sistema desarrollado para la administración integral de estaciones de servicio. Cubre aspectos operativos y fiscales, con módulos para playa y minimercado, panel central para operadores y herramientas de control para la gestión administrativa</p>
+                        <a href="sistema.html?modulo=estaciones" class="btn">Más información</a>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <i class="fas fa-shopping-cart"></i>
+                    <div class="card-body">
+                        <h2 class="card-title">Gestión para Supermercados</h2>
+                        <p class="texto-card">Sistema completo para la administración de supermercados. Incluye funciones fiscales y operativas en línea de cajas, panel para cajeros, módulo gerencial y herramientas para ventas, compras, stock, caja, bancos, contabilidad, estadísticas y cash flow.</p>
+                        <a href="sistema.html?modulo=supermercados" class="btn">Más información</a>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <i class="fas fa-tv"></i>
+                    <div class="card-body">
+                        <h2 class="card-title">Gestión para Cablevideo</h2>
+                        <p class="texto-card">Sistema integral para la administración de servicios de cable e internet. Permite parametrizar y liquidar servicios brindados. Incluye módulos de ventas, compras, caja, bancos, contabilidad, stock, servicios, recaudaciones, estadísticas y cash flow.</p>
+                        <a href="sistema.html?modulo=cablevideos" class="btn">Más información</a>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <i class="fas fa-city"></i>
+                    <div class="card-body">
+                        <h2 class="card-title">Gestión para Servicios Públicos</h2>
+                        <p class="texto-card">Sistema diseñado para la administración de cooperativas de servicios públicos. Permite parametrizar y liquidar servicios brindados. Incluye módulos de servicios, ventas, compras, caja, bancos, recaudaciones, contabilidad, stock y estadísticas.</p>
+                        <a href="sistema.html?modulo=serviciosPublicos" class="btn">Más información</a>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <i class="fa-solid fa-computer"></i>
+                    <div class="card-body">
+                        <h2 class="card-title">Distribuidores OFICIALES Holistor</h2>
+                        <p class="texto-card">Representación y comercialización del software "Holistor Estudios Contables". Módulos integrados: impuestos, sueldos, contabilidad y registraciones. Multiusuario, multiempresa, sin licencias adicionales. Compatible con ARCA y con actualizaciones automáticas</p>
+                        <a href="sistema.html?modulo=holistor" class="btn">Más información</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="contenedor" id="noticia">
+            <h2>Noticias</h2>
+            <div class="contenedor-noticias">
+                <div class="noticia">
+                    <h3>Título de la noticia 1</h3>
+                    <p>Descripción breve de la noticia 1.</p>
+                </div>
+                <div class="noticia">
+                    <h3>Título de la noticia 2</h3>
+                    <p>Descripción breve de la noticia 2.</p>
+                </div>
+                <div class="noticia">
+                    <h3>Título de la noticia 3</h3>
+                    <p>Descripción breve de la noticia 3.</p>
+                </div>
+                <div class="noticia">
+                    <h3>Título de la noticia 4</h3>
+                    <p>Descripción breve de la noticia 4.</p>
+                </div>
+                <div class="noticia">
+                    <h3>Título de la noticia 5</h3>
+                    <p>Descripción breve de la noticia 5.</p>
+                </div>
+                <div class="noticia">
+                    <h3>Título de la noticia 6</h3>
+                    <p>Descripción breve de la noticia 6.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="contenedor">
+            <h2>Nuestros clientes</h2>
+            <p>Contamos con la confianza de empresas líderes en diferentes sectores. Nuestras soluciones han sido implementadas exitosamente en comercios, estaciones de servicio, supermercados y servicios públicos, ayudando a optimizar sus procesos y mejorar su rentabilidad.</p>
+        </section>
+
+        <section id="features">
+            <div class="container">
+                <div class="center">
+                    <h1>Servicio al cliente</h1>
+                    <h3>Para nuestros clientes dejamos a su disposición herramientas útiles que le pueden servir de gran ayuda.</h3>
+                    <hr>
+                </div>
+
+                <div class="tools-section">
+                    <div class="tool-item">
+                        <h3>TeamViewer</h3>
+                        <img src="./img/teamviewer_icon-logo_.webp" alt="Logo de TeamViewer"/>
+                        <p>Esta es una Herramienta que dejamos disponibles a nuestros clientes para poder descargarla.</p>
+                        <a href="http://www.megasoft.com.ar/descargas/TeamViewer_Setup.exe">
+                            <button class="btn-info">Descargar</button>
+                        </a>
+                    </div>
+
+                    <div class="tool-item">
+                        <h3>Seguridad</h3>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12 2a5 5 0 0 1 5 5v3a3 3 0 0 1 3 3v6a3 3 0 0 1 -3 3h-10a3 3 0 0 1 -3 -3v-6a3 3 0 0 1 3 -3v-3a5 5 0 0 1 5 -5m0 12a2 2 0 0 0 -1.995 1.85l-.005 .15a2 2 0 1 0 2 -2m0 -10a3 3 0 0 0 -3 3v3h6v-3a3 3 0 0 0 -3 -3" />
+                        </svg>
+                        <p>A nuestros clientes les dejamos a su disposición información útil sobre las copias de seguridad.</p>
+                        <button class="btn-info" onclick="alert('Aquí iría la información sobre seguridad y copias de seguridad.')">Información</button>
+                    </div>
+                </div>
+
+                <div class="schedule-section">
+                    <h1 class="lead">Horarios de la empresa</h1>
+                    <div class="row-flex">
+                        <div class="schedule-column">
+                            <h3>Soporte Técnico</h3>
+                            <p>Lunes a Viernes de 9 a 17 hs.</p>
+                            <h4>Emergencia 24hs:</h4>
+                            <p>0342-6109434</p>
+                        </div>
+                        
+                        <div class="schedule-column">
+                            <h3>Administración</h3>
+                            <p>Lunes a Viernes de 9 a 17 hs.</p>
+                            <h4>Teléfono:</h4>
+                            <p>0342-6109434</p>
+                        </div>
+                        
+                        <div class="schedule-column">
+                            <h3>Ventas</h3>
+                            <p>Lunes a Viernes de 9 a 17 hs.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="center">
+                        <h6>Nota: para los casos fuera de los horarios establecidos, comunicarse a los teléfonos celulares indicados oportunamente.</h6>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-top">
+            <div class="footer-col footer-logo">
+                <img src="./img/megasoft-logo-blanco.webp" alt="MEGASOFT" loading="lazy">
+            </div>
+
+            <div class="footer-col footer-contacto">
+                <h3>Contacto</h3>
+                <ul class="contact-list">
+                    <li><a href="mailto:ventas@megasoft.com.ar">ventas@megasoft.com.ar</a></li>
+                    <li><a href="mailto:adm@megasoft.com.ar">adm@megasoft.com.ar</a></li>
+                    <li><a href="mailto:soporte@megasoft.com.ar">soporte@megasoft.com.ar</a></li>
+                    <li><a href="tel:+543426102434">Teléfono: (0342) 610-2434</a></li>
+                    <li><address>Salta 3476 · CP 3000 · Santa Fe, Argentina</address></li>
+                </ul>
+            </div>
+
+            <div class="footer-col footer-login">
+                <h3>Inicio de sesión</h3>
+                <p>Ingreso de clientes a la plataforma virtual.</p>
+                <a class="btn" href="https://www.admes.com.ar/ingreso.aspx" target="_blank" rel="noopener">Ingresar</a>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p class="copyright">© 2025 MEGASOFT. Todos los derechos reservados.</p>
+            <div class="social">
+                <a href="https://www.facebook.com/tu_pagina" target="_blank" rel="noopener" aria-label="Facebook">
+                    <i class="fa-brands fa-facebook"></i>
+                </a>
+                <a href="https://www.instagram.com/tu_usuario" target="_blank" rel="noopener" aria-label="Instagram">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+                <a href="https://www.linkedin.com/company/tu_empresa" target="_blank" rel="noopener" aria-label="LinkedIn">
+                    <i class="fa-brands fa-linkedin"></i>
+                </a>
+                <a href="https://www.youtube.com/@tu_canal" target="_blank" rel="noopener" aria-label="YouTube">
+                    <i class="fa-brands fa-youtube"></i>
+                </a>
+                <a href="https://wa.me/543421234567" target="_blank" rel="noopener" aria-label="WhatsApp">
+                    <i class="fa-brands fa-whatsapp"></i>
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <div class="icono-flotante" id="btn-contacto" onclick="toggleContactMenu()">
+        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M5 4h4l2 5l-2.5 1.5a11 11 0 0 0 5 5l1.5 -2.5l5 2v4a2 2 0 0 1 -2 2a16 16 0 0 1 -15 -15a2 2 0 0 1 2 -2" />
+            <path d="M15 7l0 .01" />
+            <path d="M18 7l0 .01" />
+            <path d="M21 7l0 .01" />
+        </svg>
+    </div>
+
+    <div class="menu-contacto" id="menu-contacto">
+        <a href="tel:+542222222222" target="_blank">📞 Contacto VENTAS</a>
+        <a href="tel:+543333333333" target="_blank">📞 Contacto ADM</a>
+        <a href="tel:+541111111111" target="_blank">📞 Contacto SOPORTE</a>
+    </div>
+
+    <script>
+        // Funcionalidad del menú de contacto flotante
+        function toggleContactMenu() {
+            const menu = document.getElementById('menu-contacto');
+            menu.classList.toggle('active');
+        }
+
+        // Funcionalidad del menú móvil (si es necesaria)
+        function toggleMenu() {
+            const menu = document.querySelector('.menu');
+            menu.classList.toggle('active');
+        }
+
+        // Cerrar menú de contacto al hacer click fuera
+        document.addEventListener('click', function(event) {
+            const contactBtn = document.getElementById('btn-contacto');
+            const contactMenu = document.getElementById('menu-contacto');
+            
+            if (!contactBtn.contains(event.target) && !contactMenu.contains(event.target)) {
+                contactMenu.classList.remove('active');
+            }
+        });
+
+        // Efecto de scroll en el header
+        window.addEventListener('scroll', function() {
+            const header = document.querySelector('.header');
+            if (window.scrollY > 100) {
+                header.style.background = 'rgba(255, 255, 255, 0.98)';
+                header.style.backdropFilter = 'blur(20px)';
+            } else {
+                header.style.background = 'rgba(255, 255, 255, 0.95)';
+            }
+        });
+
+        // Intersection Observer para animaciones
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.animationPlayState = 'running';
+                }
+            });
+        }, observerOptions);
+
+        // Observar elementos para animaciones
+        document.querySelectorAll('.card, .noticia').forEach(el => {
+            observer.observe(el);
+        });
+
+        // Smooth scroll para enlaces internos
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+>>>>>>> 4ce10ff0d3ae4a7d8baa46f8a58699fbde9f49c8
 </html>
