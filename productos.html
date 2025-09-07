@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MEGASOFT - Sistema Modular Moderno</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #1a237e;
+            --secondary-color: #3f51b5;
+            --accent-color: #00bcd4;
+            --text-color: #ffffff;
+            --soft: #f8fafc;
+            --dark-gray: #64748b;
+            --light-gray: #f1f5f9;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            color: #334155;
+            background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+        }
+
+        /* === HEADER === */
+        .header {
+            background: white;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        /* === CONTENIDO INICIAL === */
+        .contenido-inicial {
+            padding: 60px 20px;
+            margin: 40px auto;
+            max-width: 1200px;
+            text-align: center;
+            background: linear-gradient(135deg, var(--text-color) 0%, rgba(255, 255, 255, 0.95) 100%);
+            border-radius: 24px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .contenido-inicial::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, var(--primary-color), var(--accent-color));
+            border-radius: 24px 24px 0 0;
+        }
+
+        .contenido-inicial::after {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(0, 188, 212, 0.03) 0%, transparent 70%);
+            pointer-events: none;
+        }
+
+        .contenido-inicial h1 {
+            font-size: clamp(2.5rem, 5vw, 4rem);
+            font-weight: 900;
+            background: #0467be;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 1.5rem;
+            letter-spacing: -0.02em;
+            position: relative;
+            z-index: 1;
+        }
+
+        .contenido-inicial p {
+            font-size: 1.25rem;
+            line-height: 1.7;
+            color: var(--dark-gray);
+            margin: 2rem auto;
+            max-width: 650px;
+            font-weight: 400;
+            position: relative;
+            z-index: 1;
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="navbar">
+            <a href="index.html" class="logo">
+                <img src="./img/Logo.png" alt="logo MEGASOFT">
+            </a>
+
+            <button class="menu-toggle" onclick="toggleMenu()">&#9776;</button>
+
+            <nav class="menu">
+                <a href="Empresa.html">Nosotros</a>
+                <a href="clientes.html">Clientes</a>
+                <a href="productos.html">Productos</a>
+                <a href="https://www.admes.com.ar/MGUtilidades.aspx">Utilidades</a>
+                <a href="contacto.html">Contáctanos</a>
+                <a href="#noticia">Noticias</a>
+                <a href="https://www.admes.com.ar/ingreso.aspx" class="btn-acceso">Acceso clientes</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="contenido-inicial">
+            <h1>Conoce nuestros servicios</h1>
+            <p>Selecciona un módulo para ver sus funcionalidades. También podrás navegar por secciones con el menú horizontal. Descubre cómo nuestras soluciones pueden transformar tu negocio.</p>
+        </div>
+
+        <div class="modules-title">
+            <h2>Nuestros módulos</h2>
+        </div>
+
+       <nav id="menu-principal">
+    <ul class="navegacion-modulos">
+        <li>
+            <a href="#navegacion-modulos" class="modulo-link active" data-modulo="comercios">
+                <i class="fa-solid fa-shop"></i>
+                <span>Comercios</span>
+            </a>
+        </li>
+        <li>
+            <a href="#navegacion-modulos" class="modulo-link" data-modulo="estaciones">
+                <i class="fas fa-gas-pump"></i>
+                <span>Estaciones de Servicios</span>
+            </a>
+        </li>
+        <li>
+            <a href="#navegacion-modulos" class="modulo-link" data-modulo="supermercados">
+                <i class="fas fa-shopping-cart"></i>
+                <span>Supermercados</span>
+            </a>
+        </li>
+        <li>
+            <a href="#navegacion-modulos" class="modulo-link" data-modulo="cablevideos">
+                <i class="fas fa-tv"></i>
+                <span>Cablevideos</span>
+            </a>
+        </li>
+        <li>
+            <a href="#navegacion-modulos" class="modulo-link" data-modulo="servicios">
+                <i class="fas fa-city"></i>
+                <span>Servicios Públicos</span>
+            </a>
+        </li>
+        <li>
+            <a href="#navegacion-modulos" class="modulo-link" data-modulo="holistor">
+                <i class="fa-solid fa-computer pulse"></i>
+                <span>Sistemas HOLISTOR</span>
+            </a>
+        </li>
+    </ul>
+</nav>
+
+<nav class="module-top-tabs">
+    <ul class="tabs">
+        <li><a class="tab active" data-section="introduccion" href="introduccion.html"><span>Introducción</span></a></li>
+        <li><a class="tab" data-section="puntos-venta" href="puntos-venta.html"><span>Puntos de Venta</span></a></li>
+        <li><a class="tab" data-section="administracion" href="administracion.html"><span>Administración Central</span></a></li>
+        <li><a class="tab" data-section="seguridad" href="seguridad.html"><span>Seguridad</span></a></li>
+    </ul>
+</nav>
+
+        <section class="content-area">
+            <div class="contenido-acordeon">
+                <div class="module-header">
+                    <h2>Gestión Comercial para Empresas y Comercios</h2>
+                    <a href="#" target="_blank">
+                        Ver más detalles <i class="fas fa-external-link-alt"></i>
+                    </a>
+                </div>
+
+                <section class="mod-section" id="introduccion">
+                    <h3>Introducción</h3>
+                    <p>Nuestro sistema de gestión comercial está diseñado para empresas que buscan optimizar sus procesos de venta y administración. Con una interfaz moderna e intuitiva, podrás controlar todos los aspectos de tu negocio desde un solo lugar.</p>
+                    
+                    <div class="feature-grid">
+                        <div class="feature-item">
+                            <h4><i class="fas fa-chart-line"></i>Análisis en Tiempo Real</h4>
+                            <p>Obtén insights instantáneos sobre el rendimiento de tu negocio con dashboards interactivos.</p>
+                        </div>
+                        <div class="feature-item">
+                            <h4><i class="fas fa-mobile-alt"></i>Acceso Móvil</h4>
+                            <p>Gestiona tu negocio desde cualquier dispositivo con nuestra aplicación móvil.</p>
+                        </div>
+                        <div class="feature-item">
+                            <h4><i class="fas fa-cloud"></i>En la Nube</h4>
+                            <p>Almacenamiento seguro y accesible desde cualquier lugar del mundo.</p>
+                        </div>
+                        <div class="feature-item">
+                            <h4><i class="fas fa-headset"></i>Soporte 24/7</h4>
+                            <p>Nuestro equipo de expertos está disponible cuando lo necesites.</p>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-top">
+            <div class="footer-col footer-logo">
+                <img src="./img/megasoft-logo-blanco.webp" alt="MEGASOFT" loading="lazy">
+            </div>
+
+            <div class="footer-col footer-contacto">
+                <h3>Contacto</h3>
+                <ul class="contact-list">
+                    <li><a href="mailto:ventas@megasoft.com.ar">ventas@megasoft.com.ar</a></li>
+                    <li><a href="mailto:adm@megasoft.com.ar">adm@megasoft.com.ar</a></li>
+                    <li><a href="mailto:soporte@megasoft.com.ar">soporte@megasoft.com.ar</a></li>
+                    <li><a href="tel:+543426102434">Teléfono: (0342) 610-2434</a></li>
+                    <li><address>Salta 3476 · CP 3000 · Santa Fe, Argentina</address></li>
+                </ul>
+            </div>
+
+            <div class="footer-col footer-login">
+                <h3>Inicio de sesión</h3>
+                <p>Ingreso de clientes a la plataforma virtual.</p>
+                <a class="btn" href="https://www.admes.com.ar/ingreso.aspx" target="_blank" rel="noopener">Ingresar</a>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p class="copyright">© 2025 MEGASOFT. Todos los derechos reservados.</p>
+            <div class="social">
+                <a href="https://www.facebook.com/tu_pagina" target="_blank" rel="noopener" aria-label="Facebook">
+                    <i class="fa-brands fa-facebook"></i>
+                </a>
+                <a href="https://www.instagram.com/tu_usuario" target="_blank" rel="noopener" aria-label="Instagram">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+                <a href="https://www.linkedin.com/company/tu_empresa" target="_blank" rel="noopener" aria-label="LinkedIn">
+                    <i class="fa-brands fa-linkedin"></i>
+                </a>
+                <a href="https://www.youtube.com/@tu_canal" target="_blank" rel="noopener" aria-label="YouTube">
+                    <i class="fa-brands fa-youtube"></i>
+                </a>
+                <a href="https://wa.me/543421234567" target="_blank" rel="noopener" aria-label="WhatsApp">
+                    <i class="fa-brands fa-whatsapp"></i>
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    
+    <script>
+        // Funcionalidad de navegación de módulos
+        document.querySelectorAll('.modulo-link').forEach(link => {
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                // Remover clase active de todos los enlaces
+                document.querySelectorAll('.modulo-link').forEach(l => l.classList.remove('active'));
+                
+                // Agregar clase active al enlace clickeado
+                this.classList.add('active');
+                
+                // Simular cambio de contenido
+                const modulo = this.dataset.modulo;
+                updateModuleContent(modulo);
+            });
+        });
+
+        // Funcionalidad de tabs
+        document.querySelectorAll('.tab').forEach(tab => {
+            tab.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                // Remover clase active de todos los tabs
+                document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+                
+                // Agregar clase active al tab clickeado
+                this.classList.add('active');
+                
+                // Simular cambio de sección
+                const section = this.dataset.section;
+                updateSectionContent(section);
+            });
+        });
+
+        function updateModuleContent(modulo) {
+            const titles = {
+                comercios: 'Gestión Comercial para Empresas y Comercios',
+                estaciones: 'Sistema para Estaciones de Servicio',
+                supermercados: 'Gestión Integral de Supermercados',
+                cablevideos: 'Administración de Servicios de Cable',
+                servicios: 'Gestión de Servicios Públicos',
+                holistor: 'Sistemas Integrales HOLISTOR'
+            };
+
+            document.querySelector('.module-header h2').textContent = titles[modulo] || 'Módulo Seleccionado';
+            
+            // Agregar efecto de entrada
+            const section = document.querySelector('.mod-section');
+            section.style.opacity = '0';
+            section.style.transform = 'translateY(20px)';
+            
+            setTimeout(() => {
+                section.style.opacity = '1';
+                section.style.transform = 'translateY(0)';
+            }, 100);
+        }
+
+        function updateSectionContent(section) {
+            const contents = {
+                introduccion: 'Introducción al sistema seleccionado',
+                'puntos-venta': 'Gestión de Puntos de Venta',
+                administracion: 'Panel de Administración Central',
+                seguridad: 'Características de Seguridad'
+            };
+
+            document.querySelector('.mod-section h3').textContent = contents[section] || 'Sección';
+            
+            // Efecto visual de cambio
+            const section_el = document.querySelector('.mod-section');
+            section_el.style.transform = 'scale(0.98)';
+            setTimeout(() => {
+                section_el.style.transform = 'scale(1)';
+            }, 150);
+        }
+
+        // Efecto de parallax suave en scroll
+        window.addEventListener('scroll', () => {
+            const scrolled = window.pageYOffset;
+            const rate = scrolled * -0.5;
+            
+            document.querySelector('.contenido-inicial::after')?.style.setProperty('transform', `translate3d(0, ${rate}px, 0)`);
+        });
+
+        // Observador de intersección para animaciones
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.animationPlayState = 'running';
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.navegacion-modulos li, .mod-section').forEach(el => {
+            observer.observe(el);
+        });
+    </script>
+</body>
+</html>

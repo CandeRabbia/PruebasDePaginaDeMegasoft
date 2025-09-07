@@ -1,0 +1,329 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MEGASOFT - Soluciones Empresariales Integrales</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    
+</head>
+
+<body>
+    <header class="header">
+        <div class="navbar">
+            <a href="#top" class="logo">
+                <img src="./img/Logo.png" alt="logo MEGASOFT">
+            </a>
+
+            <button class="menu-toggle" onclick="toggleMenu()">&#9776;</button>
+
+            <nav class="menu">
+                <a href="Empresa.html">Nosotros</a>
+                <a href="clientes.html">Clientes</a>
+                <a href="productos.html">Productos</a>
+                <a href="https://www.admes.com.ar/MGUtilidades.aspx">Utilidades</a>
+                <a href="contacto.html">Contáctanos</a>
+                <a href="#noticia">Noticias</a>
+                <a href="https://www.admes.com.ar/ingreso.aspx" class="btn-acceso">Acceso clientes</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="contenido-principal">
+            <video loop muted autoplay class="video-fondo" src="./video/video3.webm"></video>
+            <div class="overlay"></div>
+            
+            <div class="fondo">
+                <div class="recuadro-encapsulado">
+                    <img src="./img/megasoft-vertical.png" class="imagen-logo" alt="logo">
+                </div>
+            </div>
+        </section>
+
+        <section class="contenedor-producto">
+            <h1>Conocé nuestro sistema de gestión</h1>
+            
+            <div class="sistema">
+                <div class="card">
+                    <i class="fa-solid fa-shop"></i>
+                    <div class="card-body">
+                        <h2 class="card-title">Gestión para Empresas o Comercios</h2>
+                        <p class="texto-card">Sistema diseñado para la gestión administrativa y comercial de empresas. Incluye control fiscal e impositivo, módulos para puntos de venta y puestos administrativos, panel gerencial con acceso por usuario y contraseña, y niveles de permisos personalizados.</p>
+                        <a href="sistema.html?modulo=comercios" class="btn">Más información</a>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <i class="fas fa-gas-pump"></i>
+                    <div class="card-body">
+                        <h2 class="card-title">Gestión para Estación de Servicios</h2>
+                        <p class="texto-card">Sistema desarrollado para la administración integral de estaciones de servicio. Cubre aspectos operativos y fiscales, con módulos para playa y minimercado, panel central para operadores y herramientas de control para la gestión administrativa</p>
+                        <a href="sistema.html?modulo=estaciones" class="btn">Más información</a>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <i class="fas fa-shopping-cart"></i>
+                    <div class="card-body">
+                        <h2 class="card-title">Gestión para Supermercados</h2>
+                        <p class="texto-card">Sistema completo para la administración de supermercados. Incluye funciones fiscales y operativas en línea de cajas, panel para cajeros, módulo gerencial y herramientas para ventas, compras, stock, caja, bancos, contabilidad, estadísticas y cash flow.</p>
+                        <a href="sistema.html?modulo=supermercados" class="btn">Más información</a>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <i class="fas fa-tv"></i>
+                    <div class="card-body">
+                        <h2 class="card-title">Gestión para Cablevideo</h2>
+                        <p class="texto-card">Sistema integral para la administración de servicios de cable e internet. Permite parametrizar y liquidar servicios brindados. Incluye módulos de ventas, compras, caja, bancos, contabilidad, stock, servicios, recaudaciones, estadísticas y cash flow.</p>
+                        <a href="sistema.html?modulo=cablevideos" class="btn">Más información</a>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <i class="fas fa-city"></i>
+                    <div class="card-body">
+                        <h2 class="card-title">Gestión para Servicios Públicos</h2>
+                        <p class="texto-card">Sistema diseñado para la administración de cooperativas de servicios públicos. Permite parametrizar y liquidar servicios brindados. Incluye módulos de servicios, ventas, compras, caja, bancos, recaudaciones, contabilidad, stock y estadísticas.</p>
+                        <a href="sistema.html?modulo=serviciosPublicos" class="btn">Más información</a>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <i class="fa-solid fa-computer"></i>
+                    <div class="card-body">
+                        <h2 class="card-title">Distribuidores OFICIALES Holistor</h2>
+                        <p class="texto-card">Representación y comercialización del software "Holistor Estudios Contables". Módulos integrados: impuestos, sueldos, contabilidad y registraciones. Multiusuario, multiempresa, sin licencias adicionales. Compatible con ARCA y con actualizaciones automáticas</p>
+                        <a href="sistema.html?modulo=holistor" class="btn">Más información</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="contenedor" id="noticia">
+            <h2>Noticias</h2>
+            <div class="contenedor-noticias">
+                <div class="noticia">
+                    <h3>Título de la noticia 1</h3>
+                    <p>Descripción breve de la noticia 1.</p>
+                </div>
+                <div class="noticia">
+                    <h3>Título de la noticia 2</h3>
+                    <p>Descripción breve de la noticia 2.</p>
+                </div>
+                <div class="noticia">
+                    <h3>Título de la noticia 3</h3>
+                    <p>Descripción breve de la noticia 3.</p>
+                </div>
+                <div class="noticia">
+                    <h3>Título de la noticia 4</h3>
+                    <p>Descripción breve de la noticia 4.</p>
+                </div>
+                <div class="noticia">
+                    <h3>Título de la noticia 5</h3>
+                    <p>Descripción breve de la noticia 5.</p>
+                </div>
+                <div class="noticia">
+                    <h3>Título de la noticia 6</h3>
+                    <p>Descripción breve de la noticia 6.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="contenedor">
+            <h2>Nuestros clientes</h2>
+            <p>Contamos con la confianza de empresas líderes en diferentes sectores. Nuestras soluciones han sido implementadas exitosamente en comercios, estaciones de servicio, supermercados y servicios públicos, ayudando a optimizar sus procesos y mejorar su rentabilidad.</p>
+        </section>
+
+        <section id="features">
+            <div class="container">
+                <div class="center">
+                    <h1>Servicio al cliente</h1>
+                    <h3>Para nuestros clientes dejamos a su disposición herramientas útiles que le pueden servir de gran ayuda.</h3>
+                    <hr>
+                </div>
+
+                <div class="tools-section">
+                    <div class="tool-item">
+                        <h3>TeamViewer</h3>
+                        <img src="./img/teamviewer_icon-logo_.webp" alt="Logo de TeamViewer"/>
+                        <p>Esta es una Herramienta que dejamos disponibles a nuestros clientes para poder descargarla.</p>
+                        <a href="http://www.megasoft.com.ar/descargas/TeamViewer_Setup.exe">
+                            <button class="btn-info">Descargar</button>
+                        </a>
+                    </div>
+
+                    <div class="tool-item">
+                        <h3>Seguridad</h3>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12 2a5 5 0 0 1 5 5v3a3 3 0 0 1 3 3v6a3 3 0 0 1 -3 3h-10a3 3 0 0 1 -3 -3v-6a3 3 0 0 1 3 -3v-3a5 5 0 0 1 5 -5m0 12a2 2 0 0 0 -1.995 1.85l-.005 .15a2 2 0 1 0 2 -2m0 -10a3 3 0 0 0 -3 3v3h6v-3a3 3 0 0 0 -3 -3" />
+                        </svg>
+                        <p>A nuestros clientes les dejamos a su disposición información útil sobre las copias de seguridad.</p>
+                        <button class="btn-info" onclick="alert('Aquí iría la información sobre seguridad y copias de seguridad.')">Información</button>
+                    </div>
+                </div>
+
+                <div class="schedule-section">
+                    <h1 class="lead">Horarios de la empresa</h1>
+                    <div class="row-flex">
+                        <div class="schedule-column">
+                            <h3>Soporte Técnico</h3>
+                            <p>Lunes a Viernes de 9 a 17 hs.</p>
+                            <h4>Emergencia 24hs:</h4>
+                            <p>0342-6109434</p>
+                        </div>
+                        
+                        <div class="schedule-column">
+                            <h3>Administración</h3>
+                            <p>Lunes a Viernes de 9 a 17 hs.</p>
+                            <h4>Teléfono:</h4>
+                            <p>0342-6109434</p>
+                        </div>
+                        
+                        <div class="schedule-column">
+                            <h3>Ventas</h3>
+                            <p>Lunes a Viernes de 9 a 17 hs.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="center">
+                        <h6>Nota: para los casos fuera de los horarios establecidos, comunicarse a los teléfonos celulares indicados oportunamente.</h6>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-top">
+            <div class="footer-col footer-logo">
+                <img src="./img/megasoft-logo-blanco.webp" alt="MEGASOFT" loading="lazy">
+            </div>
+
+            <div class="footer-col footer-contacto">
+                <h3>Contacto</h3>
+                <ul class="contact-list">
+                    <li><a href="mailto:ventas@megasoft.com.ar">ventas@megasoft.com.ar</a></li>
+                    <li><a href="mailto:adm@megasoft.com.ar">adm@megasoft.com.ar</a></li>
+                    <li><a href="mailto:soporte@megasoft.com.ar">soporte@megasoft.com.ar</a></li>
+                    <li><a href="tel:+543426102434">Teléfono: (0342) 610-2434</a></li>
+                    <li><address>Salta 3476 · CP 3000 · Santa Fe, Argentina</address></li>
+                </ul>
+            </div>
+
+            <div class="footer-col footer-login">
+                <h3>Inicio de sesión</h3>
+                <p>Ingreso de clientes a la plataforma virtual.</p>
+                <a class="btn" href="https://www.admes.com.ar/ingreso.aspx" target="_blank" rel="noopener">Ingresar</a>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p class="copyright">© 2025 MEGASOFT. Todos los derechos reservados.</p>
+            <div class="social">
+                <a href="https://www.facebook.com/tu_pagina" target="_blank" rel="noopener" aria-label="Facebook">
+                    <i class="fa-brands fa-facebook"></i>
+                </a>
+                <a href="https://www.instagram.com/tu_usuario" target="_blank" rel="noopener" aria-label="Instagram">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+                <a href="https://www.linkedin.com/company/tu_empresa" target="_blank" rel="noopener" aria-label="LinkedIn">
+                    <i class="fa-brands fa-linkedin"></i>
+                </a>
+                <a href="https://www.youtube.com/@tu_canal" target="_blank" rel="noopener" aria-label="YouTube">
+                    <i class="fa-brands fa-youtube"></i>
+                </a>
+                <a href="https://wa.me/543421234567" target="_blank" rel="noopener" aria-label="WhatsApp">
+                    <i class="fa-brands fa-whatsapp"></i>
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <div class="icono-flotante" id="btn-contacto" onclick="toggleContactMenu()">
+        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M5 4h4l2 5l-2.5 1.5a11 11 0 0 0 5 5l1.5 -2.5l5 2v4a2 2 0 0 1 -2 2a16 16 0 0 1 -15 -15a2 2 0 0 1 2 -2" />
+            <path d="M15 7l0 .01" />
+            <path d="M18 7l0 .01" />
+            <path d="M21 7l0 .01" />
+        </svg>
+    </div>
+
+    <div class="menu-contacto" id="menu-contacto">
+        <a href="tel:+542222222222" target="_blank">📞 Contacto VENTAS</a>
+        <a href="tel:+543333333333" target="_blank">📞 Contacto ADM</a>
+        <a href="tel:+541111111111" target="_blank">📞 Contacto SOPORTE</a>
+    </div>
+
+    <script>
+        // Funcionalidad del menú de contacto flotante
+        function toggleContactMenu() {
+            const menu = document.getElementById('menu-contacto');
+            menu.classList.toggle('active');
+        }
+
+        // Funcionalidad del menú móvil (si es necesaria)
+        function toggleMenu() {
+            const menu = document.querySelector('.menu');
+            menu.classList.toggle('active');
+        }
+
+        // Cerrar menú de contacto al hacer click fuera
+        document.addEventListener('click', function(event) {
+            const contactBtn = document.getElementById('btn-contacto');
+            const contactMenu = document.getElementById('menu-contacto');
+            
+            if (!contactBtn.contains(event.target) && !contactMenu.contains(event.target)) {
+                contactMenu.classList.remove('active');
+            }
+        });
+
+        // Efecto de scroll en el header
+        window.addEventListener('scroll', function() {
+            const header = document.querySelector('.header');
+            if (window.scrollY > 100) {
+                header.style.background = 'rgba(255, 255, 255, 0.98)';
+                header.style.backdropFilter = 'blur(20px)';
+            } else {
+                header.style.background = 'rgba(255, 255, 255, 0.95)';
+            }
+        });
+
+        // Intersection Observer para animaciones
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.animationPlayState = 'running';
+                }
+            });
+        }, observerOptions);
+
+        // Observar elementos para animaciones
+        document.querySelectorAll('.card, .noticia').forEach(el => {
+            observer.observe(el);
+        });
+
+        // Smooth scroll para enlaces internos
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
