@@ -587,6 +587,7 @@
             transform: translateY(0);
         }
 
+        
         .menu-contacto a {
             display: block;
             padding: 12px 0;
@@ -629,6 +630,35 @@
             .navbar {
                 padding: 1rem;
             }
+              .menu.active {
+      display: flex;
+      position: absolute;
+      top: 100%;             /* justo debajo de la navbar */
+      left: 0;
+      right: 0;
+      background: #fff;
+      flex-direction: column;
+      gap: 0;
+      padding: 12px 8px;
+      border-radius: 12px;
+      box-shadow: 0 12px 30px rgba(0,0,0,.12);
+      z-index: 1001;
+  }
+
+  .navbar {
+      position: relative; /* importante para que el menú se posicione dentro */
+  }
+
+  .menu a {
+      padding: 12px 14px;
+      border-radius: 8px;
+      color: #334155;  /* gris legible */
+  }
+
+  .menu a:active {
+      background: #f1f5f9;
+  }
+
 
             .contenido-principal {
                 padding-top: 80px;

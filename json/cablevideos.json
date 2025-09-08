@@ -17,7 +17,7 @@
 
     "Seguridad": "<div class='ac-blk'><h4>Seguridad y Mantenimiento</h4><p>Definición y mantenimiento de usuarios por niveles de acceso que habilitan o restringen operaciones según permisos. Mantenimiento de archivos (depuración y regeneración de índices) para recuperación ante cortes de energía o interrupciones abruptas.</p></div>",
 
-    "RSed": "<div class='ac-blk'><h4>Uso de Red</h4><p>Preparado para funcionamiento en red bajo entorno Windows (Windows 95, 98, 2000/2003 y XP) para un número no limitado de terminales.</p></div>",
+    "Red": "<div class='ac-blk'><h4>Uso de Red</h4><p>Preparado para funcionamiento en red bajo entorno Windows (Windows 95, 98, 2000/2003 y XP) para un número no limitado de terminales.</p></div>",
 
     "Actualizaciones": "<div class='ac-blk'><h4>Actualizaciones y Mejoras al Sistema</h4><p>Se envían e instalan todas las mejoras introducidas por nuestra empresa y las solicitadas por el Cablevideo (cambios de gran impacto se cotizan por separado). Ante anexos de nuevos servicios, se generan las modificaciones necesarias para incorporarlos manteniendo la integralidad del sistema.</p></div>"
   }

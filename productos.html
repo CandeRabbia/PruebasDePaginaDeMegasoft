@@ -98,6 +98,258 @@
             position: relative;
             z-index: 1;
         }
+
+        /* === ESTILOS MEJORADOS PARA LA SECCIÓN DE INFORMACIÓN === */
+        
+        /* Contenedor principal de información */
+        #contenido-acordeon {
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 0 20px;
+        }
+
+        /* Título principal del módulo */
+        #contenido-acordeon > h2 {
+            background: linear-gradient(135deg, #1e88e5 0%, #1565c0 100%);
+            color: white;
+            padding: 25px 30px;
+            border-radius: 12px 12px 0 0;
+            margin-bottom: 0;
+            box-shadow: 0 4px 15px rgba(30, 136, 229, 0.2);
+            font-size: 1.8em;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        #contenido-acordeon > h2::before {
+            content: "📊";
+            margin-right: 12px;
+            font-size: 1.2em;
+        }
+
+        #contenido-acordeon > h2::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 100px;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1));
+            transform: translateX(100px);
+            animation: shimmer 3s infinite;
+        }
+
+        @keyframes shimmer {
+            0% { transform: translateX(-100px); }
+            50% { transform: translateX(100px); }
+            100% { transform: translateX(100px); }
+        }
+
+        /* Contenedor de la sección */
+        .mod-section {
+            background: white;
+            border: 1px solid #e0e7ff;
+            border-radius: 0 0 12px 12px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+
+        /* Título de la sección */
+        .mod-section h3 {
+            background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+            color: #1e40af;
+            padding: 20px 30px;
+            margin: 0;
+            font-size: 1.4em;
+            font-weight: 600;
+            border-bottom: 1px solid #e0e7ff;
+            display: flex;
+            align-items: center;
+        }
+
+        .mod-section h3::before {
+          
+            margin-right: 10px;
+            color: #1e88e5;
+            font-size: 0.8em;
+        }
+
+        /* Elementos individuales de información */
+        .mod-section h4 {
+            font-size: 1.25em;
+            font-weight: 700;
+            color: #1e40af;
+            margin: 0 0 12px 0;
+            padding: 25px 30px 0 30px;
+            display: flex;
+            align-items: center;
+            position: relative;
+            transition: all 0.3s ease;
+        }
+
+        .mod-section h4::before {
+            content: "●";
+            margin-right: 12px;
+            font-size: 1em;
+            color: #1e88e5;
+        }
+
+        /* Descripciones */
+        .mod-section p {
+            color: #475569;
+            line-height: 1.6;
+            font-size: 0.95em;
+            margin: 0 0 25px 0;
+            padding: 0 30px 25px 30px;
+            text-align: justify;
+            position: relative;
+            border-bottom: 1px solid #f1f5f9;
+        }
+
+        .mod-section p:last-child {
+            border-bottom: none;
+        }
+
+        /* Efecto hover para elementos */
+        .mod-section h4:hover {
+            color: #1565c0;
+            transform: translateX(5px);
+        }
+
+        .mod-section h4:hover::before {
+            color: #0d47a1;
+            transform: scale(1.2);
+        }
+
+        /* Separadores visuales sutiles */
+        .mod-section p::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 30px;
+            right: 30px;
+            height: 1px;
+            background: linear-gradient(90deg, transparent 0%, #e2e8f0 20%, #e2e8f0 80%, transparent 100%);
+        }
+
+        .mod-section p:last-child::after {
+            display: none;
+        }
+
+        /* Animaciones de entrada */
+        .mod-section h4 {
+            opacity: 0;
+            transform: translateX(-20px);
+            animation: slideInLeft 0.6s ease forwards;
+        }
+
+        .mod-section p {
+            opacity: 0;
+            transform: translateY(10px);
+            animation: fadeInUp 0.6s ease forwards;
+        }
+
+        .mod-section h4:nth-of-type(1) { animation-delay: 0.1s; }
+        .mod-section h4:nth-of-type(2) { animation-delay: 0.2s; }
+        .mod-section h4:nth-of-type(3) { animation-delay: 0.3s; }
+        .mod-section h4:nth-of-type(4) { animation-delay: 0.4s; }
+        .mod-section h4:nth-of-type(5) { animation-delay: 0.5s; }
+        .mod-section h4:nth-of-type(6) { animation-delay: 0.6s; }
+
+        .mod-section p:nth-of-type(2n) { animation-delay: 0.15s; }
+        .mod-section p:nth-of-type(2n+1) { animation-delay: 0.25s; }
+
+        @keyframes slideInLeft {
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        @keyframes fadeInUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Efecto de carga suave */
+        .mod-section {
+            transform: scale(0.95);
+            opacity: 0;
+            animation: scaleIn 0.5s ease forwards;
+        }
+
+        @keyframes scaleIn {
+            to {
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
+
+        /* Responsive design */
+        @media (max-width: 768px) {
+            #contenido-acordeon {
+                margin: 10px;
+                padding: 0 10px;
+            }
+
+            #contenido-acordeon > h2 {
+                padding: 20px;
+                font-size: 1.5em;
+            }
+
+            .mod-section h3 {
+                padding: 15px 20px;
+                font-size: 1.2em;
+            }
+
+            .mod-section h4 {
+                padding: 20px 20px 0 20px;
+                font-size: 1.1em;
+            }
+
+            .mod-section p {
+                padding: 0 20px 20px 20px;
+                font-size: 0.9em;
+            }
+
+            .mod-section h4:hover {
+                transform: none;
+            }
+        }
+
+        /* Mejora para accesibilidad */
+        .mod-section h4:focus {
+            outline: 2px solid #1e88e5;
+            outline-offset: 2px;
+        }
+
+        /* Indicador de carga */
+        .mod-section.loading {
+            position: relative;
+        }
+
+        .mod-section.loading::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: linear-gradient(90deg, #1e88e5, #00bcd4);
+            animation: loading-bar 2s ease-in-out infinite;
+        }
+
+        @keyframes loading-bar {
+            0% { transform: translateX(-100%); }
+            50% { transform: translateX(100%); }
+            100% { transform: translateX(100%); }
+        }
     </style>
 </head>
 <body>
@@ -158,7 +410,7 @@
             </a>
         </li>
         <li>
-            <a href="#navegacion-modulos" class="modulo-link" data-modulo="servicios">
+            <a href="#navegacion-modulos" class="modulo-link" data-modulo="serviciosPublicos">
                 <i class="fas fa-city"></i>
                 <span>Servicios Públicos</span>
             </a>
@@ -172,49 +424,11 @@
     </ul>
 </nav>
 
-<nav class="module-top-tabs">
-    <ul class="tabs">
-        <li><a class="tab active" data-section="introduccion" href="introduccion.html"><span>Introducción</span></a></li>
-        <li><a class="tab" data-section="puntos-venta" href="puntos-venta.html"><span>Puntos de Venta</span></a></li>
-        <li><a class="tab" data-section="administracion" href="administracion.html"><span>Administración Central</span></a></li>
-        <li><a class="tab" data-section="seguridad" href="seguridad.html"><span>Seguridad</span></a></li>
-    </ul>
-</nav>
+<nav class="module-top-tabs" id="moduleTopTabs"></nav>
 
-        <section class="content-area">
-            <div class="contenido-acordeon">
-                <div class="module-header">
-                    <h2>Gestión Comercial para Empresas y Comercios</h2>
-                    <a href="#" target="_blank">
-                        Ver más detalles <i class="fas fa-external-link-alt"></i>
-                    </a>
-                </div>
-
-                <section class="mod-section" id="introduccion">
-                    <h3>Introducción</h3>
-                    <p>Nuestro sistema de gestión comercial está diseñado para empresas que buscan optimizar sus procesos de venta y administración. Con una interfaz moderna e intuitiva, podrás controlar todos los aspectos de tu negocio desde un solo lugar.</p>
-                    
-                    <div class="feature-grid">
-                        <div class="feature-item">
-                            <h4><i class="fas fa-chart-line"></i>Análisis en Tiempo Real</h4>
-                            <p>Obtén insights instantáneos sobre el rendimiento de tu negocio con dashboards interactivos.</p>
-                        </div>
-                        <div class="feature-item">
-                            <h4><i class="fas fa-mobile-alt"></i>Acceso Móvil</h4>
-                            <p>Gestiona tu negocio desde cualquier dispositivo con nuestra aplicación móvil.</p>
-                        </div>
-                        <div class="feature-item">
-                            <h4><i class="fas fa-cloud"></i>En la Nube</h4>
-                            <p>Almacenamiento seguro y accesible desde cualquier lugar del mundo.</p>
-                        </div>
-                        <div class="feature-item">
-                            <h4><i class="fas fa-headset"></i>Soporte 24/7</h4>
-                            <p>Nuestro equipo de expertos está disponible cuando lo necesites.</p>
-                        </div>
-                    </div>
-                </section>
-            </div>
-        </section>
+    <section class="col-der">
+      <div id="contenido-acordeon"></div>
+    </section>
     </main>
 
     <footer class="footer">
@@ -263,108 +477,6 @@
         </div>
     </footer>
 
-    
-    <script>
-        // Funcionalidad de navegación de módulos
-        document.querySelectorAll('.modulo-link').forEach(link => {
-            link.addEventListener('click', function(e) {
-                e.preventDefault();
-                
-                // Remover clase active de todos los enlaces
-                document.querySelectorAll('.modulo-link').forEach(l => l.classList.remove('active'));
-                
-                // Agregar clase active al enlace clickeado
-                this.classList.add('active');
-                
-                // Simular cambio de contenido
-                const modulo = this.dataset.modulo;
-                updateModuleContent(modulo);
-            });
-        });
-
-        // Funcionalidad de tabs
-        document.querySelectorAll('.tab').forEach(tab => {
-            tab.addEventListener('click', function(e) {
-                e.preventDefault();
-                
-                // Remover clase active de todos los tabs
-                document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
-                
-                // Agregar clase active al tab clickeado
-                this.classList.add('active');
-                
-                // Simular cambio de sección
-                const section = this.dataset.section;
-                updateSectionContent(section);
-            });
-        });
-
-        function updateModuleContent(modulo) {
-            const titles = {
-                comercios: 'Gestión Comercial para Empresas y Comercios',
-                estaciones: 'Sistema para Estaciones de Servicio',
-                supermercados: 'Gestión Integral de Supermercados',
-                cablevideos: 'Administración de Servicios de Cable',
-                servicios: 'Gestión de Servicios Públicos',
-                holistor: 'Sistemas Integrales HOLISTOR'
-            };
-
-            document.querySelector('.module-header h2').textContent = titles[modulo] || 'Módulo Seleccionado';
-            
-            // Agregar efecto de entrada
-            const section = document.querySelector('.mod-section');
-            section.style.opacity = '0';
-            section.style.transform = 'translateY(20px)';
-            
-            setTimeout(() => {
-                section.style.opacity = '1';
-                section.style.transform = 'translateY(0)';
-            }, 100);
-        }
-
-        function updateSectionContent(section) {
-            const contents = {
-                introduccion: 'Introducción al sistema seleccionado',
-                'puntos-venta': 'Gestión de Puntos de Venta',
-                administracion: 'Panel de Administración Central',
-                seguridad: 'Características de Seguridad'
-            };
-
-            document.querySelector('.mod-section h3').textContent = contents[section] || 'Sección';
-            
-            // Efecto visual de cambio
-            const section_el = document.querySelector('.mod-section');
-            section_el.style.transform = 'scale(0.98)';
-            setTimeout(() => {
-                section_el.style.transform = 'scale(1)';
-            }, 150);
-        }
-
-        // Efecto de parallax suave en scroll
-        window.addEventListener('scroll', () => {
-            const scrolled = window.pageYOffset;
-            const rate = scrolled * -0.5;
-            
-            document.querySelector('.contenido-inicial::after')?.style.setProperty('transform', `translate3d(0, ${rate}px, 0)`);
-        });
-
-        // Observador de intersección para animaciones
-        const observerOptions = {
-            threshold: 0.1,
-            rootMargin: '0px 0px -50px 0px'
-        };
-
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.style.animationPlayState = 'running';
-                }
-            });
-        }, observerOptions);
-
-        document.querySelectorAll('.navegacion-modulos li, .mod-section').forEach(el => {
-            observer.observe(el);
-        });
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>
