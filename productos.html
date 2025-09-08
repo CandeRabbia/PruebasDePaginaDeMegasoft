@@ -7,350 +7,6 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-    <style>
-        :root {
-            --primary-color: #1a237e;
-            --secondary-color: #3f51b5;
-            --accent-color: #00bcd4;
-            --text-color: #ffffff;
-            --soft: #f8fafc;
-            --dark-gray: #64748b;
-            --light-gray: #f1f5f9;
-        }
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: 'Inter', sans-serif;
-            line-height: 1.6;
-            color: #334155;
-            background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
-        }
-
-        /* === HEADER === */
-        .header {
-            background: white;
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
-            position: sticky;
-            top: 0;
-            z-index: 100;
-        }
-
-        /* === CONTENIDO INICIAL === */
-        .contenido-inicial {
-            padding: 60px 20px;
-            margin: 40px auto;
-            max-width: 1200px;
-            text-align: center;
-            background: linear-gradient(135deg, var(--text-color) 0%, rgba(255, 255, 255, 0.95) 100%);
-            border-radius: 24px;
-            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
-            position: relative;
-            overflow: hidden;
-        }
-
-        .contenido-inicial::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            height: 4px;
-            background: linear-gradient(90deg, var(--primary-color), var(--accent-color));
-            border-radius: 24px 24px 0 0;
-        }
-
-        .contenido-inicial::after {
-            content: '';
-            position: absolute;
-            top: -50%;
-            left: -50%;
-            width: 200%;
-            height: 200%;
-            background: radial-gradient(circle, rgba(0, 188, 212, 0.03) 0%, transparent 70%);
-            pointer-events: none;
-        }
-
-        .contenido-inicial h1 {
-            font-size: clamp(2.5rem, 5vw, 4rem);
-            font-weight: 900;
-            background: #0467be;
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            margin-bottom: 1.5rem;
-            letter-spacing: -0.02em;
-            position: relative;
-            z-index: 1;
-        }
-
-        .contenido-inicial p {
-            font-size: 1.25rem;
-            line-height: 1.7;
-            color: var(--dark-gray);
-            margin: 2rem auto;
-            max-width: 650px;
-            font-weight: 400;
-            position: relative;
-            z-index: 1;
-        }
-
-        /* === ESTILOS MEJORADOS PARA LA SECCIÓN DE INFORMACIÓN === */
-        
-        /* Contenedor principal de información */
-        #contenido-acordeon {
-            max-width: 1200px;
-            margin: 20px auto;
-            padding: 0 20px;
-        }
-
-        /* Título principal del módulo */
-        #contenido-acordeon > h2 {
-            background: linear-gradient(135deg, #1e88e5 0%, #1565c0 100%);
-            color: white;
-            padding: 25px 30px;
-            border-radius: 12px 12px 0 0;
-            margin-bottom: 0;
-            box-shadow: 0 4px 15px rgba(30, 136, 229, 0.2);
-            font-size: 1.8em;
-            font-weight: 600;
-            display: flex;
-            align-items: center;
-            position: relative;
-            overflow: hidden;
-        }
-
-        #contenido-acordeon > h2::before {
-            content: "📊";
-            margin-right: 12px;
-            font-size: 1.2em;
-        }
-
-        #contenido-acordeon > h2::after {
-            content: '';
-            position: absolute;
-            top: 0;
-            right: 0;
-            width: 100px;
-            height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1));
-            transform: translateX(100px);
-            animation: shimmer 3s infinite;
-        }
-
-        @keyframes shimmer {
-            0% { transform: translateX(-100px); }
-            50% { transform: translateX(100px); }
-            100% { transform: translateX(100px); }
-        }
-
-        /* Contenedor de la sección */
-        .mod-section {
-            background: white;
-            border: 1px solid #e0e7ff;
-            border-radius: 0 0 12px 12px;
-            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
-            overflow: hidden;
-            transition: all 0.3s ease;
-        }
-
-        /* Título de la sección */
-        .mod-section h3 {
-            background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
-            color: #1e40af;
-            padding: 20px 30px;
-            margin: 0;
-            font-size: 1.4em;
-            font-weight: 600;
-            border-bottom: 1px solid #e0e7ff;
-            display: flex;
-            align-items: center;
-        }
-
-        .mod-section h3::before {
-          
-            margin-right: 10px;
-            color: #1e88e5;
-            font-size: 0.8em;
-        }
-
-        /* Elementos individuales de información */
-        .mod-section h4 {
-            font-size: 1.25em;
-            font-weight: 700;
-            color: #1e40af;
-            margin: 0 0 12px 0;
-            padding: 25px 30px 0 30px;
-            display: flex;
-            align-items: center;
-            position: relative;
-            transition: all 0.3s ease;
-        }
-
-        .mod-section h4::before {
-            content: "●";
-            margin-right: 12px;
-            font-size: 1em;
-            color: #1e88e5;
-        }
-
-        /* Descripciones */
-        .mod-section p {
-            color: #475569;
-            line-height: 1.6;
-            font-size: 0.95em;
-            margin: 0 0 25px 0;
-            padding: 0 30px 25px 30px;
-            text-align: justify;
-            position: relative;
-            border-bottom: 1px solid #f1f5f9;
-        }
-
-        .mod-section p:last-child {
-            border-bottom: none;
-        }
-
-        /* Efecto hover para elementos */
-        .mod-section h4:hover {
-            color: #1565c0;
-            transform: translateX(5px);
-        }
-
-        .mod-section h4:hover::before {
-            color: #0d47a1;
-            transform: scale(1.2);
-        }
-
-        /* Separadores visuales sutiles */
-        .mod-section p::after {
-            content: "";
-            position: absolute;
-            bottom: 0;
-            left: 30px;
-            right: 30px;
-            height: 1px;
-            background: linear-gradient(90deg, transparent 0%, #e2e8f0 20%, #e2e8f0 80%, transparent 100%);
-        }
-
-        .mod-section p:last-child::after {
-            display: none;
-        }
-
-        /* Animaciones de entrada */
-        .mod-section h4 {
-            opacity: 0;
-            transform: translateX(-20px);
-            animation: slideInLeft 0.6s ease forwards;
-        }
-
-        .mod-section p {
-            opacity: 0;
-            transform: translateY(10px);
-            animation: fadeInUp 0.6s ease forwards;
-        }
-
-        .mod-section h4:nth-of-type(1) { animation-delay: 0.1s; }
-        .mod-section h4:nth-of-type(2) { animation-delay: 0.2s; }
-        .mod-section h4:nth-of-type(3) { animation-delay: 0.3s; }
-        .mod-section h4:nth-of-type(4) { animation-delay: 0.4s; }
-        .mod-section h4:nth-of-type(5) { animation-delay: 0.5s; }
-        .mod-section h4:nth-of-type(6) { animation-delay: 0.6s; }
-
-        .mod-section p:nth-of-type(2n) { animation-delay: 0.15s; }
-        .mod-section p:nth-of-type(2n+1) { animation-delay: 0.25s; }
-
-        @keyframes slideInLeft {
-            to {
-                opacity: 1;
-                transform: translateX(0);
-            }
-        }
-
-        @keyframes fadeInUp {
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        /* Efecto de carga suave */
-        .mod-section {
-            transform: scale(0.95);
-            opacity: 0;
-            animation: scaleIn 0.5s ease forwards;
-        }
-
-        @keyframes scaleIn {
-            to {
-                transform: scale(1);
-                opacity: 1;
-            }
-        }
-
-        /* Responsive design */
-        @media (max-width: 768px) {
-            #contenido-acordeon {
-                margin: 10px;
-                padding: 0 10px;
-            }
-
-            #contenido-acordeon > h2 {
-                padding: 20px;
-                font-size: 1.5em;
-            }
-
-            .mod-section h3 {
-                padding: 15px 20px;
-                font-size: 1.2em;
-            }
-
-            .mod-section h4 {
-                padding: 20px 20px 0 20px;
-                font-size: 1.1em;
-            }
-
-            .mod-section p {
-                padding: 0 20px 20px 20px;
-                font-size: 0.9em;
-            }
-
-            .mod-section h4:hover {
-                transform: none;
-            }
-        }
-
-        /* Mejora para accesibilidad */
-        .mod-section h4:focus {
-            outline: 2px solid #1e88e5;
-            outline-offset: 2px;
-        }
-
-        /* Indicador de carga */
-        .mod-section.loading {
-            position: relative;
-        }
-
-        .mod-section.loading::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            height: 3px;
-            background: linear-gradient(90deg, #1e88e5, #00bcd4);
-            animation: loading-bar 2s ease-in-out infinite;
-        }
-
-        @keyframes loading-bar {
-            0% { transform: translateX(-100%); }
-            50% { transform: translateX(100%); }
-            100% { transform: translateX(100%); }
-        }
-    </style>
 </head>
 <body>
     <header class="header">
@@ -383,52 +39,52 @@
             <h2>Nuestros módulos</h2>
         </div>
 
-       <nav id="menu-principal">
-    <ul class="navegacion-modulos">
-        <li>
-            <a href="#navegacion-modulos" class="modulo-link active" data-modulo="comercios">
-                <i class="fa-solid fa-shop"></i>
-                <span>Comercios</span>
-            </a>
-        </li>
-        <li>
-            <a href="#navegacion-modulos" class="modulo-link" data-modulo="estaciones">
-                <i class="fas fa-gas-pump"></i>
-                <span>Estaciones de Servicios</span>
-            </a>
-        </li>
-        <li>
-            <a href="#navegacion-modulos" class="modulo-link" data-modulo="supermercados">
-                <i class="fas fa-shopping-cart"></i>
-                <span>Supermercados</span>
-            </a>
-        </li>
-        <li>
-            <a href="#navegacion-modulos" class="modulo-link" data-modulo="cablevideos">
-                <i class="fas fa-tv"></i>
-                <span>Cablevideos</span>
-            </a>
-        </li>
-        <li>
-            <a href="#navegacion-modulos" class="modulo-link" data-modulo="serviciosPublicos">
-                <i class="fas fa-city"></i>
-                <span>Servicios Públicos</span>
-            </a>
-        </li>
-        <li>
-            <a href="#navegacion-modulos" class="modulo-link" data-modulo="holistor">
-                <i class="fa-solid fa-computer pulse"></i>
-                <span>Sistemas HOLISTOR</span>
-            </a>
-        </li>
-    </ul>
-</nav>
+        <nav id="menu-principal">
+            <ul class="navegacion-modulos">
+                <li>
+                    <a href="#navegacion-modulos" class="modulo-link active" data-modulo="comercios">
+                        <i class="fa-solid fa-shop"></i>
+                        <span>Comercios</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#navegacion-modulos" class="modulo-link" data-modulo="estaciones">
+                        <i class="fas fa-gas-pump"></i>
+                        <span>Estaciones de Servicios</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#navegacion-modulos" class="modulo-link" data-modulo="supermercados">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span>Supermercados</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#navegacion-modulos" class="modulo-link" data-modulo="cablevideos">
+                        <i class="fas fa-tv"></i>
+                        <span>Cablevideos</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#navegacion-modulos" class="modulo-link" data-modulo="serviciosPublicos">
+                        <i class="fas fa-city"></i>
+                        <span>Servicios Públicos</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#navegacion-modulos" class="modulo-link" data-modulo="holistor">
+                        <i class="fa-solid fa-computer pulse"></i>
+                        <span>Sistemas HOLISTOR</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
 
-<nav class="module-top-tabs" id="moduleTopTabs"></nav>
+        <nav class="module-top-tabs" id="moduleTopTabs"></nav>
 
-    <section class="col-der">
-      <div id="contenido-acordeon"></div>
-    </section>
+        <section class="col-der">
+            <div id="contenido-acordeon"></div>
+        </section>
     </main>
 
     <footer class="footer">
