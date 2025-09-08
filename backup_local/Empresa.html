@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Empresa</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #1a237e;
+            --secondary-color: #3f51b5;
+            --accent-color: #00bcd4;
+            --text-color: #ffffff;
+            --soft: #f8fafc;
+            --dark-gray: #64748b;
+            --light-gray: #f1f5f9;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            color: #334155;
+            background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+        }
+
+        /* === HEADER === */
+        .header {
+            background: white;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        /* === CONTENIDO INICIAL === */
+        .contenido-inicial {
+            padding: 60px 20px;
+            margin: 40px auto;
+            max-width: 1200px;
+            text-align: center;
+            background: linear-gradient(135deg, var(--text-color) 0%, rgba(255, 255, 255, 0.95) 100%);
+            border-radius: 24px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .contenido-inicial::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, var(--primary-color), var(--accent-color));
+            border-radius: 24px 24px 0 0;
+        }
+
+        .contenido-inicial::after {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(0, 188, 212, 0.03) 0%, transparent 70%);
+            pointer-events: none;
+        }
+
+        .contenido-inicial h1 {
+            font-size: clamp(2.5rem, 5vw, 4rem);
+            font-weight: 900;
+            background: #0467be;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 1.5rem;
+            letter-spacing: -0.02em;
+            position: relative;
+            z-index: 1;
+        }
+
+        .contenido-inicial p {
+            font-size: 1.25rem;
+            line-height: 1.7;
+            color: var(--dark-gray);
+            margin: 2rem auto;
+            max-width: 650px;
+            font-weight: 400;
+            position: relative;
+            z-index: 1;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="header">
+        <div class="navbar">
+            <a href="index.html" class="logo">
+                <img src="./img/Logo.png" alt="logo MEGASOFT">
+            </a>
+
+            <button class="menu-toggle" onclick="toggleMenu()">&#9776;</button>
+
+            <nav class="menu">
+                <a href="Empresa.html">Nosotros</a>
+                <a href="clientes.html">Clientes</a>
+                <a href="productos.html">Productos</a>
+                <a href="https://www.admes.com.ar/MGUtilidades.aspx">Utilidades</a>
+                <a href="contacto.html">Contáctanos</a>
+                <a href="#noticia">Noticias</a>
+                <a href="https://www.admes.com.ar/ingreso.aspx" class="btn-acceso">Acceso clientes</a>
+            </nav>
+        </div>
+    </header>
+    
+        <main>
+    <div>
+        <div id="contenido-empresa" class="contenido-empresa contenido-inicial"></div>
+    </div>
+</main>
+    <footer class="footer">
+        <div class="footer-top">
+            <div class="footer-col footer-logo">
+                <img src="./img/megasoft-logo-blanco.webp" alt="MEGASOFT" loading="lazy">
+            </div>
+
+            <div class="footer-col footer-contacto">
+                <h3>Contacto</h3>
+                <ul class="contact-list">
+                    <li><a href="mailto:ventas@megasoft.com.ar">ventas@megasoft.com.ar</a></li>
+                    <li><a href="mailto:adm@megasoft.com.ar">adm@megasoft.com.ar</a></li>
+                    <li><a href="mailto:soporte@megasoft.com.ar">soporte@megasoft.com.ar</a></li>
+                    <li><a href="tel:+543426102434">Teléfono: (0342) 610-2434</a></li>
+                    <li><address>Salta 3476 · CP 3000 · Santa Fe, Argentina</address></li>
+                </ul>
+            </div>
+
+            <div class="footer-col footer-login">
+                <h3>Inicio de sesión</h3>
+                <p>Ingreso de clientes a la plataforma virtual.</p>
+                <a class="btn" href="https://www.admes.com.ar/ingreso.aspx" target="_blank" rel="noopener">Ingresar</a>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p class="copyright">© 2025 MEGASOFT. Todos los derechos reservados.</p>
+            <div class="social">
+                <a href="https://www.facebook.com/tu_pagina" target="_blank" rel="noopener" aria-label="Facebook">
+                    <i class="fa-brands fa-facebook"></i>
+                </a>
+                <a href="https://www.instagram.com/tu_usuario" target="_blank" rel="noopener" aria-label="Instagram">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+                <a href="https://www.linkedin.com/company/tu_empresa" target="_blank" rel="noopener" aria-label="LinkedIn">
+                    <i class="fa-brands fa-linkedin"></i>
+                </a>
+                <a href="https://www.youtube.com/@tu_canal" target="_blank" rel="noopener" aria-label="YouTube">
+                    <i class="fa-brands fa-youtube"></i>
+                </a>
+                <a href="https://wa.me/543421234567" target="_blank" rel="noopener" aria-label="WhatsApp">
+                    <i class="fa-brands fa-whatsapp"></i>
+                </a>
+            </div>
+        </div>
+    </footer>
+        
+    <script>
+    fetch("./json/historia.json")
+        .then(response => response.json())
+        .then(data => {
+            const contenedor = document.getElementById("contenido-empresa");
+
+            const titulo = document.createElement("h1");
+            titulo.textContent = data.titulo;
+            contenedor.appendChild(titulo);
+
+            data.parrafos.forEach(txt => {
+            const p = document.createElement("p");
+            p.textContent = txt;
+            contenedor.appendChild(p);
+    });
+  })
+  .catch(err => console.error("Error cargando empresa.json:", err));
+</script>
+</body>
+</html>
