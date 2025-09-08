@@ -173,23 +173,6 @@
         </div>
     </footer>
         
-    <script>
-    fetch("./json/historia.json")
-        .then(response => response.json())
-        .then(data => {
-            const contenedor = document.getElementById("contenido-empresa");
-
-            const titulo = document.createElement("h1");
-            titulo.textContent = data.titulo;
-            contenedor.appendChild(titulo);
-
-            data.parrafos.forEach(txt => {
-            const p = document.createElement("p");
-            p.textContent = txt;
-            contenedor.appendChild(p);
-    });
-  })
-  .catch(err => console.error("Error cargando empresa.json:", err));
-</script>
+  <script src="script.js"></script>
 </body>
 </html>

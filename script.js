@@ -265,20 +265,6 @@
             }
         });
 
-        // Intersection Observer para animaciones
-        const observerOptions = {
-            threshold: 0.1,
-            rootMargin: '0px 0px -50px 0px'
-        };
-
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.style.animationPlayState = 'running';
-                }
-            });
-        }, observerOptions);
-
         // Observar elementos para animaciones
         document.querySelectorAll('.card, .noticia').forEach(el => {
             observer.observe(el);
@@ -298,4 +284,20 @@
             });
         });
 
+    fetch("./json/historia.json")
+        .then(response => response.json())
+        .then(data => {
+            const contenedor = document.getElementById("contenido-empresa");
+
+            const titulo = document.createElement("h1");
+            titulo.textContent = data.titulo;
+            contenedor.appendChild(titulo);
+
+            data.parrafos.forEach(txt => {
+            const p = document.createElement("p");
+            p.textContent = txt;
+            contenedor.appendChild(p);
+    });
+  })
+  .catch(err => console.error("Error cargando empresa.json:", err));
         
