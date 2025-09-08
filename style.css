@@ -99,6 +99,14 @@ body {
 .menu a:hover::before {
     left: 0;
 }
+.lead{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    
+
+}
 
 .btn-acceso {
     background: #0467be !important;
@@ -487,7 +495,18 @@ body {
     max-width: 1400px;
     margin: 0 auto 40px;
 }
+.footer-logo{
+    display: flex;
+    gap: 16px;
+    margin-bottom: 20px;
+    width: 90%;
+}
 
+.footer-login{
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
 .footer-col h3 {
     margin-bottom: 20px;
     color: var(--accent-color);
@@ -544,16 +563,17 @@ body {
     background: var(--accent-color);
     transform: translateY(-2px);
 }
-.btn{
+.btn-ingreso{
     background: var(--light-gray);
     color: var(--dark-gray);
-    margin-top: 20px;
+
     padding: 12px 24px;
     border: none;
     border-radius: 20px;
     font-weight: 600;
     cursor: pointer;
     transition: all 0.3s ease;
+    width: 120px;
 }
 /* === FLOATING CONTACT === */
 .icono-flotante {
@@ -954,7 +974,7 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background: #0467be;
+  
     opacity: 0;
     transition: opacity 0.3s ease;
     border-radius: 50px;
@@ -976,7 +996,6 @@ body {
 }
 
 .tab.active {
-    color: white;
     transform: translateY(-2px);
     box-shadow: 0 8px 24px rgba(26, 35, 126, 0.3);
 }
@@ -1642,4 +1661,12 @@ textarea::placeholder {
 .mod-section h4:focus {
     outline: 2px solid #1e88e5;
     outline-offset: 2px;
+}
+
+/**SECCION CLIENTES**/
+.clientes-card{
+   display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 32px;
+    margin-top: 60px;
 }

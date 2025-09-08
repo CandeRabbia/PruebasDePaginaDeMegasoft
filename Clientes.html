@@ -1,104 +1,13 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Empresa</title>
+    <title>MEGASOFT - Soluciones Empresariales Integrales</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-  <!--  <style>
-        :root {
-            --primary-color: #1a237e;
-            --secondary-color: #3f51b5;
-            --accent-color: #00bcd4;
-            --text-color: #ffffff;
-            --soft: #f8fafc;
-            --dark-gray: #64748b;
-            --light-gray: #f1f5f9;
-        }
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: 'Inter', sans-serif;
-            line-height: 1.6;
-            color: #334155;
-            background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
-        }
-
-        /* === HEADER === */
-        .header {
-            background: white;
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
-            position: sticky;
-            top: 0;
-            z-index: 100;
-        }
-
-        /* === CONTENIDO INICIAL === */
-        .contenido-inicial {
-            padding: 60px 20px;
-            margin: 40px auto;
-            max-width: 1200px;
-            text-align: center;
-            background: linear-gradient(135deg, var(--text-color) 0%, rgba(255, 255, 255, 0.95) 100%);
-            border-radius: 24px;
-            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
-            position: relative;
-            overflow: hidden;
-        }
-
-        .contenido-inicial::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            height: 4px;
-            background: linear-gradient(90deg, var(--primary-color), var(--accent-color));
-            border-radius: 24px 24px 0 0;
-        }
-
-        .contenido-inicial::after {
-            content: '';
-            position: absolute;
-            top: -50%;
-            left: -50%;
-            width: 200%;
-            height: 200%;
-            background: radial-gradient(circle, rgba(0, 188, 212, 0.03) 0%, transparent 70%);
-            pointer-events: none;
-        }
-
-        .contenido-inicial h1 {
-            font-size: clamp(2.5rem, 5vw, 4rem);
-            font-weight: 900;
-            background: #0467be;
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            margin-bottom: 1.5rem;
-            letter-spacing: -0.02em;
-            position: relative;
-            z-index: 1;
-        }
-
-        .contenido-inicial p {
-            font-size: 1.25rem;
-            line-height: 1.7;
-            color: var(--dark-gray);
-            margin: 2rem auto;
-            max-width: 650px;
-            font-weight: 400;
-            position: relative;
-            z-index: 1;
-        }
-    </style>-->
+    
 </head>
 
 <body>
@@ -112,7 +21,7 @@
 
             <nav class="menu">
                 <a href="Empresa.html">Nosotros</a>
-                <a href="clientes.html">Clientes</a>
+                <a href="#">Clientes</a>
                 <a href="productos.html">Productos</a>
                 <a href="https://www.admes.com.ar/MGUtilidades.aspx">Utilidades</a>
                 <a href="contacto.html">Contáctanos</a>
@@ -121,13 +30,40 @@
             </nav>
         </div>
     </header>
-    
-        <main>
-    <div>
-        <div id="contenido-empresa" class="contenido-empresa contenido-inicial"></div>
-    </div>
-</main>
-    <footer class="footer">
+<body>
+        
+    <main>
+       <h1>Nuestros Clientes</h1>
+       <div class="clientes-card">
+         <div class="noticia">
+                    <h3>Título de la noticia 1</h3>
+                    <p>Descripción breve de la noticia 1.</p>
+                </div>
+                <div class="noticia">
+                    <h3>Título de la noticia 2</h3>
+                    <p>Descripción breve de la noticia 2.</p>
+                </div>
+                <div class="noticia">
+                    <h3>Título de la noticia 3</h3>
+                    <p>Descripción breve de la noticia 3.</p>
+                </div>
+                <div class="noticia">
+                    <h3>Título de la noticia 4</h3>
+                    <p>Descripción breve de la noticia 4.</p>
+                </div>
+                <div class="noticia">
+                    <h3>Título de la noticia 5</h3>
+                    <p>Descripción breve de la noticia 5.</p>
+                </div>
+                <div class="noticia">
+                    <h3>Título de la noticia 6</h3>
+                    <p>Descripción breve de la noticia 6.</p>
+                </div>
+           </div>
+       </div>
+    </main>
+
+     <footer class="footer">
         <div class="footer-top">
             <div class="footer-col footer-logo">
                 <img src="./img/megasoft-logo-blanco.webp" alt="MEGASOFT" loading="lazy">
@@ -163,13 +99,12 @@
                 <a href="https://www.tiktok.com/company/tu_empresa" target="_blank" rel="noopener" aria-label="TikTok">
                     <i class="fa-brands fa-tiktok"></i>
                 </a>
+               
                 <a href="https://wa.me/543421234567" target="_blank" rel="noopener" aria-label="WhatsApp">
                     <i class="fa-brands fa-whatsapp"></i>
                 </a>
             </div>
         </div>
     </footer>
-        
-  <script src="script.js"></script>
 </body>
 </html>
