@@ -446,6 +446,7 @@ body {
 }
 
 .btn-info {
+    margin-top:10px;
     background: var(--accent-color);
     color: white;
     padding: 12px 24px;

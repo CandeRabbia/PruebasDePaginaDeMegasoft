@@ -1,18 +1,37 @@
+﻿<%@ Page Title="Nuestros Clientes" Language="VB" MasterPageFile="" AutoEventWireup="false" CodeFile="clientes3.aspx.vb" Inherits="clientes" %>
+
 <!DOCTYPE html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MEGASOFT - Soluciones Empresariales Integrales</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+<head runat="server">
+    <meta charset="utf-8" />
+    <title>MEGASOFT - Nuestros Clientes</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+    <link rel="icon" type="image/png" href="./img/M.png" />
 
-     <link rel="icon" type="image/png" href="./img/M.png">
-    
+    <style> 
+        .clientes-fila .clientes-cuadro .clientes-imagen {
+            width: 30%;
+            height: 100px;
+        }
+        .clientes-fila .clientes-cuadro .clientes-nombre {
+            width: 50%;
+            font-size: 1.2em;
+            line-height: 150%; /*ESPACIO DEL TEXTO*/
+        }
+        .clientes-fila .clientes-cuadro .clientes-definicion {
+            width: 75%;
+            line-height: 150%;
+            font-size: 1.0em;
+        }
+
+        
+    </style>
 </head>
 
 <body>
+    <!-- NAV -->
     <header class="header">
         <div class="navbar">
             <a href="index.html" class="logo">
@@ -32,40 +51,30 @@
             </nav>
         </div>
     </header>
-<body>
-        
+
+    <!-- CONTENIDO CENTRAL -->
     <main>
-       <h1>Nuestros Clientes</h1>
-       <div class="clientes-card">
-         <div class="noticia">
-                    <h3>Cliente 1</h3>
-                    <p>Descripción breve del cliente 1.</p>
+        		 <br ><br > <br >
+         <div class="container">
+            <div class="row">
+                <div class="col-md-offset-3 col-md-6">
+
+                    <h1>Nuestros Clientes</h1>
+                    <h5>Para poder visualizarlos, seleccione un Producto y se listaran los datos correspondientes a cada uno de ellos. <br />
+Tenga en cuenta que se encuentran distribuidos por todo el país.</h5>
+                    <hr />
                 </div>
-                <div class="noticia">
-                    <h3>Cliente 2</h3>
-                    <p>Descripción breve del cliente 2.</p>
-                </div>
-                <div class="noticia">
-                    <h3>Cliente 3</h3>
-                    <p>Descripción breve del cliente 3.</p>
-                </div>
-                <div class="noticia">
-                    <h3>Cliente 4</h3>
-                    <p>Descripción breve del cliente 4.</p>
-                </div>
-                <div class="noticia">
-                    <h3>Cliente 5</h3>
-                    <p>Descripción breve del cliente 5.</p>
-                </div>
-                <div class="noticia">
-                    <h3>Cliente 6</h3>
-                    <p>Descripción breve del cliente 6.</p>
-                </div>
-           </div>
-       </div>
+            </div>
+		  </div>
+
+				<div class="clearfix"></div>
+				   <div>
+						<iframe id="siteframe" src="https://www.admes.com.ar/publico/a2/listaclientesmg.aspx"  width="100%" height="600" frameborder="0" scrolling="no" style="border:0;"></iframe>
+					</div>
     </main>
 
-     <footer class="footer">
+    <!-- FOOTER -->
+    <footer class="footer">
         <div class="footer-top">
             <div class="footer-col footer-logo">
                 <img src="./img/megasoft-logo-blanco.webp" alt="MEGASOFT" loading="lazy">
@@ -101,12 +110,23 @@
                 <a href="https://www.tiktok.com/company/tu_empresa" target="_blank" rel="noopener" aria-label="TikTok">
                     <i class="fa-brands fa-tiktok"></i>
                 </a>
-               
                 <a href="https://wa.me/543421234567" target="_blank" rel="noopener" aria-label="WhatsApp">
                     <i class="fa-brands fa-whatsapp"></i>
                 </a>
             </div>
         </div>
     </footer>
+
+    <!-- SCRIPT ajuste iframe -->
+    <script type="text/javascript">
+        window.addEventListener('message', function (event) {
+            var iframe = document.getElementById('siteframe');
+            if (event.data > 600) {
+                iframe.style.height = (event.data + 90) + 'px';
+            } else {
+                iframe.style.height = '600px';
+            }
+        }, false);
+    </script>
 </body>
 </html>
