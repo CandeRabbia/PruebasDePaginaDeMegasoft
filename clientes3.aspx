@@ -10,24 +10,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
     <link rel="icon" type="image/png" href="./img/M.png" />
 
-    <style> 
-        .clientes-fila .clientes-cuadro .clientes-imagen {
-            width: 30%;
-            height: 100px;
-        }
-        .clientes-fila .clientes-cuadro .clientes-nombre {
-            width: 50%;
-            font-size: 1.2em;
-            line-height: 150%; /*ESPACIO DEL TEXTO*/
-        }
-        .clientes-fila .clientes-cuadro .clientes-definicion {
-            width: 75%;
-            line-height: 150%;
-            font-size: 1.0em;
-        }
 
-        
-    </style>
 </head>
 
 <body>
@@ -42,7 +25,7 @@
 
             <nav class="menu">
                 <a href="Empresa.html">Nosotros</a>
-                <a href="clientes.html">Clientes</a>
+                <a href="clientes3.aspx">Clientes</a>
                 <a href="productos.html">Productos</a>
                 <a href="https://www.admes.com.ar/MGUtilidades.aspx">Utilidades</a>
                 <a href="contacto.html">Contáctanos</a>
@@ -79,7 +62,7 @@ Tenga en cuenta que se encuentran distribuidos por todo el país.</h5>
     <footer class="footer">
         <div class="footer-top">
             <div class="footer-col footer-logo">
-                <img src="./img/megasoft-logo-blanco.webp" alt="MEGASOFT" loading="lazy">
+                <img class="logo-blanco" src="/img/megasoft-logo-blanco.png" alt="MEGASOFT" loading="lazy">
             </div>
 
             <div class="footer-col footer-contacto">

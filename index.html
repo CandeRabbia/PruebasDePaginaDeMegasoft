@@ -152,7 +152,7 @@
                         <h3>TeamViewer</h3>
                         <img src="/img/teamviewer_icon-logo.png" alt="Logo de TeamViewer" loading="lazy"/>
                         <p>Esta es una Herramienta que dejamos disponibles a nuestros clientes para poder descargarla.</p>
-                        <a href="http://www.megasoft.com.ar/descargas/TeamViewer_Setup.exe">
+                        <a href="https://www.teamviewer.com/latam/download/windows/">
                             <button class="btn-info">Descargar</button>
                         </a>
                     </div>
@@ -163,7 +163,7 @@
                             <path d="M12 2a5 5 0 0 1 5 5v3a3 3 0 0 1 3 3v6a3 3 0 0 1 -3 3h-10a3 3 0 0 1 -3 -3v-6a3 3 0 0 1 3 -3v-3a5 5 0 0 1 5 -5m0 12a2 2 0 0 0 -1.995 1.85l-.005 .15a2 2 0 1 0 2 -2m0 -10a3 3 0 0 0 -3 3v3h6v-3a3 3 0 0 0 -3 -3" />
                         </svg>
                         <p>A nuestros clientes les dejamos a su disposición información útil sobre las copias de seguridad.</p>
-                        <button class="btn-info" onclick="alert('Aquí iría la información sobre seguridad y copias de seguridad.')">Información</button>
+                        <button class="btn-info" onclick="abrirModal()">Información</button>
                     </div>
                 </div>
 
@@ -252,9 +252,29 @@
     </div>
 
     <div class="menu-contacto" id="menu-contacto">
-        <a href="tel:+54 342 405-9346" target="_blank">📞 Contacto VENTAS</a>
-        <a href="tel:+543426102434" target="_blank">📞 Contacto ADM</a>
-        <a href="tel:+5403426109434" target="_blank">📞 Contacto SOPORTE</a>
+        <a href="tel:+54 342 4562730" target="_blank">📞 Contacto VENTAS</a>
+        <a href="tel:+54 342 4562730" target="_blank">📞 Contacto ADM</a>
+        <a href="tel:+54 342 4562730" target="_blank">📞 Contacto SOPORTE</a>
     </div>
+
+    <!-- Modal Seguridad -->
+<div id="modalSeguridad" class="modal-overlay">
+  <div class="modal-content">
+    <h2>Seguridad y Copias de Seguridad</h2>
+    <p>
+     Le recordamos la importancia de realizar los backups o copias de respaldo del sistema Megasoft o del sistema Holistor periódicamente y en un medio extraíble para poder llevarlos fuera de las instalaciones de la empresa y a un lugar seguro.
+Queremos aclarar también, que tanto la realización, periodicidad y traslado de los backups confeccionados a otro sitio ajeno a la empresa, no es responsabilidad de Megasoft S.A.
+Algunos de los problemas que pueden tener los servidores empleados para el sistema Megasoft o Holistor y que ocasionan la pérdida total de datos son los siguientes:
+🔵 Virus – Pueden borrar o encriptar los datos con ninguna posibilidad de reversado o recupero de los mismos.
+
+🔵 Borrado manual del sistema – Generalmente provocado por personal malintencionado o poco capacitado.
+
+🔵 Cambios de fases entre líneas trifásicas – Provocan la pérdida total del servidor con todos sus componentes (fuente, memoria, lectora) pero lo más importante es que produce una avería en la placa lógica del disco rígido provocando no solo la pérdida total de la información almacenada sino también el reemplazo del disco rígido.
+Por tales motivos, es MUY IMPORTANTE que chequeen si se están haciendo periódicamente los backups del sistema y trasladarlos a otro domicilio. En caso de necesitar asesoramiento con respecto a este tema, Ud. puede contactarse con nuestra mesa de ayuda. Recomendamos también que asigne esta tarea a algún integrante de su empresa.
+    </p>
+    <button class="close-btn" onclick="cerrarModal()">Cerrar</button>
+  </div>
+</div>
+
  <script src="script.js"></script>
 </body>

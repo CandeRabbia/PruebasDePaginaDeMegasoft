@@ -301,4 +301,33 @@
   })
   .catch(err => console.error("Error cargando empresa.json:", err));
         
-  
+  document.addEventListener('click', function(event) {
+    const menu = document.querySelector('.menu');
+    const toggleBtn = document.querySelector('.menu-toggle'); // tu botón ☰
+
+    // Si el menú está abierto y el click no fue dentro del menú ni en el botón
+    if (menu.classList.contains('active') &&
+        !menu.contains(event.target) &&
+        !toggleBtn.contains(event.target)) {
+        menu.classList.remove('active');
+    }
+});
+
+// Modal Seguridad
+function abrirModal() {
+  const modal = document.getElementById("modalSeguridad");
+  if (modal) modal.style.display = "flex";
+}
+
+function cerrarModal() {
+  const modal = document.getElementById("modalSeguridad");
+  if (modal) modal.style.display = "none";
+}
+
+// Cerrar si se hace click fuera del contenido
+window.addEventListener("click", function(e) {
+  const modal = document.getElementById("modalSeguridad");
+  if (modal && e.target === modal) {
+    cerrarModal();
+  }
+});
