@@ -500,7 +500,7 @@ body {
     display: flex;
     gap: 16px;
     margin-bottom: 20px;
-    width: 90%;
+    width: 60%;
 }
 
 .footer-login{
@@ -1670,4 +1670,10 @@ textarea::placeholder {
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 32px;
     margin-top: 60px;
+}
+
+.logo-blanco{
+   margin-left:70px;
+    max-width:250px;
+    max-height: 250px;
 }

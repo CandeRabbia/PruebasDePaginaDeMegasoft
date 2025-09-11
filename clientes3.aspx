@@ -55,6 +55,7 @@
     <!-- CONTENIDO CENTRAL -->
     <main>
         		 <br ><br > <br >
+<div class="contenido-inicial">
          <div class="container">
             <div class="row">
                 <div class="col-md-offset-3 col-md-6">
@@ -65,6 +66,7 @@ Tenga en cuenta que se encuentran distribuidos por todo el país.</h5>
                     <hr />
                 </div>
             </div>
+ </div>
 		  </div>
 
 				<div class="clearfix"></div>

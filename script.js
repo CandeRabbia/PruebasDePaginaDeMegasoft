@@ -100,9 +100,9 @@
         });
 
           function toggleMenu(){ document.querySelector('.menu').classList.toggle('active'); }
-    function moduloDesdeURL(){ const params = new URLSearchParams(window.location.search); return params.get('modulo'); }
-    function slugify(str){
-      return String(str).toLowerCase()
+          function moduloDesdeURL(){ const params = new URLSearchParams(window.location.search); return params.get('modulo'); }
+          function slugify(str){
+        return String(str).toLowerCase()
         .normalize('NFD').replace(/[\u0300-\u036f]/g,'')
         .replace(/[^a-z0-9]+/g,'-').replace(/(^-|-$)/g,'');
     }
