@@ -1,16 +1,16 @@
 ﻿<%@ Page Title="Nuestros Clientes" Language="VB" MasterPageFile="" AutoEventWireup="false" CodeFile="clientes3.aspx.vb" Inherits="clientes" %>
-
 <!DOCTYPE html>
 <html lang="es">
-<head runat="server">
-    <meta charset="utf-8" />
-    <title>MEGASOFT - Nuestros Clientes</title>
-    <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
-    <link rel="icon" type="image/png" href="./img/M.png" />
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MEGASOFT - Soluciones Empresariales Integrales</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 
-
+     <link rel="icon" type="image/png" href="./img/M.png">
+    
 </head>
 
 <body>
@@ -83,19 +83,22 @@ Tenga en cuenta que se encuentran distribuidos por todo el país.</h5>
             </div>
         </div>
 
-        <div class="footer-bottom">
+          <div class="footer-bottom">
             <p class="copyright">© 2025 MEGASOFT. Todos los derechos reservados.</p>
             <div class="social">
-                <a href="https://www.facebook.com/tu_pagina" target="_blank" rel="noopener" aria-label="Facebook">
+                <a href="https://www.facebook.com/people/Megasoft-Sa/1534124450/" target="_blank" rel="noopener" aria-label="Facebook">
                     <i class="fa-brands fa-facebook"></i>
                 </a>
-                <a href="https://www.instagram.com/tu_usuario" target="_blank" rel="noopener" aria-label="Instagram">
+                <a href="https://www.instagram.com/megasoft.sa/" target="_blank" rel="noopener" aria-label="Instagram">
                     <i class="fa-brands fa-instagram"></i>
                 </a>
-                <a href="https://www.tiktok.com/company/tu_empresa" target="_blank" rel="noopener" aria-label="TikTok">
+                <a href="https://www.tiktok.com/@megasoftsf" target="_blank" rel="noopener" aria-label="TikTok">
                     <i class="fa-brands fa-tiktok"></i>
                 </a>
-                <a href="https://wa.me/543421234567" target="_blank" rel="noopener" aria-label="WhatsApp">
+               <a href="https://x.com/MegasoftSA" target="_blank" rel="noopener" aria-label="Twitter">
+                    <i class="fa-brands fa-twitter"></i>
+                </a>
+                <a href="https://wa.me/543425370810" target="_blank" rel="noopener" aria-label="WhatsApp">
                     <i class="fa-brands fa-whatsapp"></i>
                 </a>
             </div>
@@ -113,5 +116,6 @@ Tenga en cuenta que se encuentran distribuidos por todo el país.</h5>
             }
         }, false);
     </script>
+    <script src="script.js"></script>
 </body>
 </html>

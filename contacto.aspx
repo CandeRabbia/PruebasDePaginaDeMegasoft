@@ -1,24 +1,22 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
+﻿<%@ Page Title="" Language="VB" MasterPageFile="./MasterPage.master" AutoEventWireup="false" CodeFile="contacto.aspx.vb" Inherits="contacto" %>
+<%@ OutputCache Location="None" %>
+<asp:Content ID="Content1" ContentPlaceHolderID="head" runat="Server">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contáctanos</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="./img/M.png">
+</asp:Content>
 
-     <link rel="icon" type="image/png" href="./img/M.png">
-</head>
-<body>
-   <header class="header">
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="Server">
+    <header class="header">
         <div class="navbar">
             <a href="index.html" class="logo">
                 <img src="./img/Logo.png" alt="logo MEGASOFT">
             </a>
-
-            <button class="menu-toggle" onclick="toggleMenu()">&#9776;</button>
-
+            <button class="menu-toggle" onclick="toggleMenu()">☰</button>
             <nav class="menu">
                 <a href="Empresa.html">Nosotros</a>
                 <a href="clientes3.aspx">Clientes</a>
@@ -34,43 +32,46 @@
     <main class="contacto-main">
         <section style="flex:1;">
             <h1 class="contacto-h1">Contáctanos</h1>
-            <form method="post" action="turno.php" class="contacto-form">
-    <div class="campo">
-        <label for="nombre" class="campo__label">Nombre: </label>
-        <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" required>
-    </div>
-    <div class="campo">
-        <label for="email" class="campo__label">Email: </label>
-        <input type="email" id="email" name="email" placeholder="Tu mail" required>
-    </div>
-    <div class="campo">
-        <label for="company" class="campo__label">Empresa: </label>
-        <input type="text" id="company" name="company" placeholder="Tu empresa" required>
-    </div>
-    <div class="campo">
-        <label for="rubro" class="campo__label">Rubro: </label>
-        <input type="text" id="rubro" name="rubro" placeholder="Rubro de tu empresa" required>
-    </div>
-    <div class="campo">
-        <label for="servicio" class="campo__label">Servicio: </label>
-        <input type="text" id="servicio" name="servicio" placeholder="Servicio de la empresa" required>
-    </div>
-    <div class="campo">
-        <label for="mensaje" class="campo__label">Mensaje: </label>
-        <textarea id="mensaje" name="mensaje" placeholder="Tu mensaje" required></textarea>
-    </div>
-    <div class="campo">
-        <button class="btn-envio" type="submit" id="enviar">Enviar</button>
-    </div>
-</form>
-
+            <form id="form1" runat="server" method="post" class="contacto-form">
+                <div class="campo">
+                    <label for="nombre" class="campo__label">Nombre: </label>
+                    <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" required runat="server" />
+                </div>
+                <div class="campo">
+                    <label for="email" class="campo__label">Email: </label>
+                    <input type="email" id="email" name="email" placeholder="Tu mail" required runat="server" />
+                </div>
+                <div class="campo">
+                    <label for="company" class="campo__label">Empresa: </label>
+                    <input type="text" id="company" name="company" placeholder="Tu empresa" required runat="server" />
+                </div>
+                <div class="campo">
+                    <label for="rubro" class="campo__label">Rubro: </label>
+                    <input type="text" id="rubro" name="rubro" placeholder="Rubro de tu empresa" required runat="server" />
+                </div>
+                <div class="campo">
+                    <label for="servicio" class="campo__label">Servicio: </label>
+                    <input type="text" id="servicio" name="servicio" placeholder="Servicio de la empresa" required runat="server" />
+                </div>
+                <div class="campo">
+                    <label for="mensaje" class="campo__label">Mensaje: </label>
+                    <textarea id="comentario" name="mensaje" placeholder="Tu mensaje" required runat="server"></textarea>
+                </div>
+                 <div class="campo">
+                    <label for="suma" class="campo__label"><%=Me.validarSuma %></label>
+                    <input type="text" id="suma" name="suma" placeholder="Ingresa el resultado" required runat="server" />
+                </div>
+                <div class="campo">
+                    <asp:Button ID="enviar" Text="Enviar mensaje" runat="server" OnClick="enviar_Click" />
+                </div>
+            </form>
         </section>
         <aside class="contacto-aside">
             <div class="contacto-info">
                 <h2>Contacta con nosotros</h2>
                 <p>Puedes comunicarte por los siguientes medios o completar el formulario.</p>
                 <ul>
-                    <li><i class="fa fa-phone"></i> +54  342 4562730</li>
+                    <li><i class="fa fa-phone"></i> +54 342 4562730</li>
                     <li><i class="fa fa-envelope"></i> ventas@megasoft.com.ar</li>
                     <li><i class="fa fa-envelope"></i> adm@megasoft.com.ar</li>
                     <li><i class="fa fa-envelope"></i> soporte@megasoft.com.ar</li>
@@ -80,22 +81,20 @@
                     <span style="font-weight:600; color:#1a237e;">Síguenos:</span>
                     <a href="#" style="margin:0 6px; color:#1976d2;"><i class="fab fa-facebook-f"></i></a>
                     <a href="#" style="margin:0 6px; color:#1976d2;"><i class="fab fa-twitter"></i></a>
-                   <a href="#" style="margin:0 6px; color:#1976d2;"><i class="fab fa-instagram"></i></a>
+                    <a href="#" style="margin:0 6px; color:#1976d2;"><i class="fab fa-instagram"></i></a>
                 </div>
             </div>
             <div class="contacto-map">
                 <iframe src="https://www.google.com/maps?q=Santa+Fe,Argentina&output=embed" width="100%" height="220" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
             </div>
         </aside>
-
-        
     </main>
+
     <footer class="footer">
         <div class="footer-top">
             <div class="footer-col footer-logo">
                 <img class="logo-blanco" src="/img/megasoft-logo-blanco.png" alt="MEGASOFT" loading="lazy">
             </div>
-
             <div class="footer-col footer-contacto">
                 <h3>Contacto</h3>
                 <ul class="contact-list">
@@ -106,45 +105,29 @@
                     <li><address>Salta 3476 · CP 3000 · Santa Fe, Argentina</address></li>
                 </ul>
             </div>
-
             <div class="footer-col footer-login">
                 <h3>Inicio de sesión</h3>
                 <p>Ingreso de clientes a la plataforma virtual.</p>
                 <a class="btn-ingreso" href="https://www.admes.com.ar/ingreso.aspx" target="_blank" rel="noopener">Ingresar</a>
             </div>
         </div>
-
-       
         <div class="footer-bottom">
             <p class="copyright">© 2025 MEGASOFT. Todos los derechos reservados.</p>
             <div class="social">
-                <a href="https://www.facebook.com/people/Megasoft-Sa/1534124450/" target="_blank" rel="noopener" aria-label="Facebook">
+                <a href="https://www.facebook.com/tu_pagina" target="_blank" rel="noopener" aria-label="Facebook">
                     <i class="fa-brands fa-facebook"></i>
                 </a>
-                <a href="https://www.instagram.com/megasoft.sa/" target="_blank" rel="noopener" aria-label="Instagram">
+                <a href="https://www.instagram.com/tu_usuario" target="_blank" rel="noopener" aria-label="Instagram">
                     <i class="fa-brands fa-instagram"></i>
                 </a>
-                <a href="https://www.tiktok.com/@megasoftsf" target="_blank" rel="noopener" aria-label="TikTok">
+                <a href="https://www.tiktok.com/company/tu_empresa" target="_blank" rel="noopener" aria-label="TikTok">
                     <i class="fa-brands fa-tiktok"></i>
                 </a>
-               <a href="https://x.com/MegasoftSA" target="_blank" rel="noopener" aria-label="Twitter">
-                    <i class="fa-brands fa-twitter"></i>
-                </a>
-                <a href="https://wa.me/543425370810" target="_blank" rel="noopener" aria-label="WhatsApp">
+                <a href="https://wa.me/543421234567" target="_blank" rel="noopener" aria-label="WhatsApp">
                     <i class="fa-brands fa-whatsapp"></i>
                 </a>
             </div>
         </div>
     </footer>
-
-  <div id="modal-mensaje" class="modal-overlay">
-    <div class="modal-content">
-        <span class="close-btn" onclick="cerrarModalMensaje()">&times;</span>
-        <h2 id="modal-titulo"></h2>
-        <p id="modal-cuerpo"></p>
-        <button class="modal-button" onclick="cerrarModalMensaje()">Aceptar</button>
-    </div>
-</div>
     <script src="script.js"></script>
-</body>
-</html>
+</asp:Content>
